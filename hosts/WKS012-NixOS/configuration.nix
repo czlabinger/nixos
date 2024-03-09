@@ -21,6 +21,12 @@
     };
   };
 
+  # Delete older than 14d
+  nix.settings.auto-optimise-store = true;
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than 14d";
+
   networking.hostName = "WKS012-NixOS";
   #networking.wireless.enable = true;
 
@@ -90,7 +96,8 @@
   users.users.stoffi05 = {
     isNormalUser = true;
     description = "Stoffi05";
-    extraGroups = ["networkmanager" "wheel"];
+    shell = pkgs.zsh;
+    extraGroups = ["networkmanager" "wheel" "light"];
     packages = with pkgs; [
       firefox
     ];
@@ -112,7 +119,7 @@
     vim
     wget
     tree
-    vscodium
+    vscode
     git
     alejandra
     libnotify
@@ -142,6 +149,22 @@
     dbus
     hyprlock
     waybar
+    material-icons
+    wofi
+    busybox
+    networkmanagerapplet
+    bluez
+    blueberry
+    pulseaudio
+    zsh
+    oh-my-zsh
+    starship
+  ];
+
+  fonts.packages = with pkgs; [
+    font-awesome
+    noto-fonts-emoji
+    (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "JetBrainsMono" "Iosevka" "SpaceMono"];})
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -171,6 +194,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
+  programs.zsh.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 }

@@ -5,7 +5,11 @@
   ...
 }: {
   imports = [
-    ../../modules/home-manager/hyprland/hyprland.nix
+    ../../modules/home-manager/hyprland
+    ../../modules/home-manager/waybar
+    ../../modules/home-manager/foot
+    ../../modules/home-manager/oh-my-zsh
+    ../../modules/home-manager/starship
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -44,7 +48,6 @@
       set -e
 
       pushd ~/nixos
-      vim ~/nixos
       alejandra . >/dev/null
 
       git diff -U0 *.nix
@@ -58,8 +61,6 @@
       git commit -am "$current"
 
       popd
-
-      notify-send -e "NixOS rebuild OK!" --icon=software-update-available
     '')
   ];
 
