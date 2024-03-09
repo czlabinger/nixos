@@ -40,10 +40,11 @@
     # # environment:
     (pkgs.writeShellScriptBin "rebuild" ''
       #!/usr/bin/env bash
+      export NIX_PATH=$NIX_PATH:nixos-config=/home/stoffi05/nixos/hosts/WKS012-NixOS/
       set -e
 
       pushd ~/nixos
-      $EDITOR ~/nixos
+      vim ~/nixos
       alejandra . >/dev/null
 
       git diff -U0 *.nix
@@ -92,9 +93,6 @@
   #
   #  /etc/profiles/per-user/stoffi05/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

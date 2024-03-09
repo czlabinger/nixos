@@ -9,9 +9,17 @@
   ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    grub = {
+      enable = true;
+      efiSupport = true;
+      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+      device = "nodev";
+    };
+  };
 
   networking.hostName = "WKS012-NixOS";
   #networking.wireless.enable = true;
@@ -107,6 +115,33 @@
     vscodium
     git
     alejandra
+    libnotify
+    webcord
+    light
+    foot
+    kitty
+    xfce.thunar
+    gnome-text-editor
+    wpsoffice
+    gnome.gnome-control-center
+    pavucontrol
+    gnome.gnome-system-monitor
+    btop
+    wlogout
+    grim
+    slurp
+    wl-clipboard
+    playerctl
+    ydotool
+    swww
+    fcitx5
+    gnome.gnome-keyring
+    polkit
+    polkit_gnome
+    hypridle
+    dbus
+    hyprlock
+    waybar
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
