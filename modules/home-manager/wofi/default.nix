@@ -4,7 +4,7 @@
     settings = {
       mode = "drun";
       allow_images = true;
-      image_size = 64;
+      image_size = 32;
     };
 
     style = ''
