@@ -5,6 +5,11 @@
     };
 
     style = ''
+      * {
+        border-radius: 3px;
+        border: none;
+      }
+
       window {
         font-size: 32px;
         font-family: "Roboto Mono Medium";
@@ -12,9 +17,13 @@
         color: white;
       }
 
+      #entry {
+        padding: 0.25em;
+      }
+
       #entry:selected {
         background-color: #bbccdd;
-        color: #333333;
+        background: linear-gradient(90deg, #bbccdd, #cca5dd);
       }
 
       #text:selected {
@@ -23,6 +32,8 @@
 
       #input {
         background-color: rgba(50, 50, 50, 0.5);
+        color: white;
+        padding: 0.25em;
       }
     '';
   };
