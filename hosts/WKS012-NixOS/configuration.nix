@@ -167,6 +167,7 @@
     jetbrains.idea-ultimate
     baobab
     jdk21
+    maven
   ];
 
   fonts.packages = with pkgs; [
