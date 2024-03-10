@@ -176,7 +176,7 @@
   ];
 
   environment.etc = with pkgs; {
-    "jdk21".source = jdk21;
+    "openjdk21".source = jdk21;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
