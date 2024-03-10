@@ -165,6 +165,7 @@
     nwg-look
     beauty-line-icon-theme
     jetbrains.idea-ultimate
+    baobab
   ];
 
   fonts.packages = with pkgs; [
