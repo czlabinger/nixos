@@ -199,7 +199,7 @@
         "Alt, L, exec, ydotool key 106:1 106:0"
 
         #################### Apps and Stuff ####################
-        "Super, Super_L, exec, wofi --show drun"
+        "Super, Super_L, exec, pkill wofi; wofi"
         "Super, C, exec, code --password-store=gnome --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "SuperShift, B, exec, baobab / &"
         "Super, T, exec, foot"
