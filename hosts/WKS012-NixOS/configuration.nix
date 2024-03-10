@@ -164,10 +164,10 @@
     coreutils
     nwg-look
     beauty-line-icon-theme
-    jetbrains.idea-ultimate
     baobab
     jdk21
     maven
+    eclipses.eclipse-java
   ];
 
   fonts.packages = with pkgs; [
