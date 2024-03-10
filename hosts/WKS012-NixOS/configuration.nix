@@ -164,6 +164,7 @@
     coreutils
     nwg-look
     beauty-line-icon-theme
+    jetbrains.idea-ultimate
   ];
 
   fonts.packages = with pkgs; [
