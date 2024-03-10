@@ -166,6 +166,7 @@
     beauty-line-icon-theme
     jetbrains.idea-ultimate
     baobab
+    jdk21
   ];
 
   fonts.packages = with pkgs; [
