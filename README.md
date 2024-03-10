@@ -16,7 +16,5 @@
 
 I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
 
-## Thanks
-To:
-
-[nomadics9](https://github.com/nomadics9/NixOS-Flake) for their waybar config
+## Thanks to
+- [nomadics9](https://github.com/nomadics9/NixOS-Flake) for their waybar config
