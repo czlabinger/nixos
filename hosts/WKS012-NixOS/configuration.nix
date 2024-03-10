@@ -167,6 +167,7 @@
     baobab
     jdk21
     maven
+    jetbrains.idea-ultimate
     eclipses.eclipse-java
   ];
 
