@@ -4,6 +4,7 @@
     settings = {
       mode = "drun";
       allow_images = true;
+      image_size = 64;
     };
 
     style = ''
@@ -38,6 +39,12 @@
         color: white;
         padding: 0.25em;
       }
+
+      image {
+        margin-left: .25em;
+        margin-right: .25em;
+      }
+
     '';
   };
 }
