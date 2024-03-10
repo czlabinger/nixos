@@ -2,6 +2,8 @@
   programs.wofi = {
     enable = true;
     settings = {
+      mode = "drun";
+      allow_images = true;
     };
 
     style = ''
@@ -15,6 +17,7 @@
         font-family: "Roboto Mono Medium";
         background-color: rgba(50, 50, 50, 0.9);
         color: white;
+        border-bottom: 3px solid white;
       }
 
       #entry {
@@ -23,7 +26,7 @@
 
       #entry:selected {
         background-color: #bbccdd;
-        background: linear-gradient(90deg, #bbccdd, #cca5dd);
+        background: linear-gradient(90deg, #bbffdd, #dd77ff);
       }
 
       #text:selected {
