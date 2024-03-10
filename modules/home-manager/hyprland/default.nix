@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./hyprlock.nix
+  ];
+
   home.packages = with pkgs; [
     waybar
     swww
