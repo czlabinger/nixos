@@ -169,6 +169,7 @@
     jetbrains.idea-ultimate
     eclipses.eclipse-java
     wxmaxima
+    notion-app-enhanced
   ];
 
   fonts.packages = with pkgs; [
