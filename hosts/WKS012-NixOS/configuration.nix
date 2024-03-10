@@ -150,7 +150,6 @@
     dbus
     hyprlock
     waybar
-    material-icons
     wofi
     busybox
     networkmanagerapplet
@@ -173,6 +172,8 @@
   ];
 
   fonts.packages = with pkgs; [
+    material-icons
+    roboto-mono
     font-awesome
     noto-fonts-emoji
     (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "JetBrainsMono" "Iosevka" "SpaceMono"];})

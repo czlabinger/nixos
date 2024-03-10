@@ -18,7 +18,7 @@
         onTimeout = "hyprlock";
       }
       {
-        timeout = (3 * 60) + 30;
+        timeout = 5 * 60;
         onTimeout = "${pkgs.coreutils}/bin/sleep 1 && systemctl suspend";
         onResume = "hyprctl dispatch dpms on";
       }
