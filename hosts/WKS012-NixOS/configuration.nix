@@ -169,6 +169,7 @@
     maven
     jetbrains.idea-ultimate
     eclipses.eclipse-java
+    wxmaxima
   ];
 
   fonts.packages = with pkgs; [
