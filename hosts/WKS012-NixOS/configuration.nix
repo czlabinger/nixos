@@ -175,6 +175,10 @@
     (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "JetBrainsMono" "Iosevka" "SpaceMono"];})
   ];
 
+  environment.etc = with pkgs; {
+    "jdk21".source = jdk21;
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
