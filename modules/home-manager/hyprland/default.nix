@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./hyprlock.nix
+    ./hypridle.nix
   ];
 
   home.packages = with pkgs; [
@@ -226,7 +227,7 @@
         "SuperShift, P, exec, playerctl play-pause"
 
         #################### Hyprland ####################
-        "Super, L, exec, hyprlock"
+        "Super, L, exec, hyprlock &"
         "Super+Shift, left, movewindow, l"
         "Super+Shift, right, movewindow, r"
         "Super+Shift, up, movewindow, u"

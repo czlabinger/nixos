@@ -16,6 +16,11 @@
     backgrounds = [
       {
         path = "screenshot";
+        blur_passes = 4;
+        blur_size = 4;
+        contrast = 1.2;
+        brightness = 1.0;
+        vibrancy = 1.0;
       }
     ];
 

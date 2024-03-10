@@ -161,6 +161,9 @@
     oh-my-zsh
     starship
     gnome2.gtkglext
+    coreutils
+    nwg-look
+    beauty-line-icon-theme
   ];
 
   fonts.packages = with pkgs; [
