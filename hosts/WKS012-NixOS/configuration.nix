@@ -170,6 +170,7 @@
     eclipses.eclipse-java
     wxmaxima
     notion-app-enhanced
+    docker
   ];
 
   programs.java = {
