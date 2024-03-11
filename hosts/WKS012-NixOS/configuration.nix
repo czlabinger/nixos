@@ -186,6 +186,7 @@
     hollywood
     gimp-with-plugins
     whatsapp-for-linux
+    neovide
   ];
 
   programs.java = {
