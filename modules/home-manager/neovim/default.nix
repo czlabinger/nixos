@@ -24,7 +24,7 @@ in {
       }
       {
         plugin = gruvbox-material;
-        config = "colorscheme gruvbox";
+        config = "vim.cmd(\"colorscheme gruvbox\")";
       }
       {
         plugin = mini-nvim;
