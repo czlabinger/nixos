@@ -11,6 +11,7 @@
     ../../modules/home-manager/oh-my-zsh
     ../../modules/home-manager/starship
     ../../modules/home-manager/wofi
+    #../../modules/home-manager/guifetch
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
