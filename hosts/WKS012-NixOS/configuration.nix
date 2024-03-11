@@ -103,6 +103,8 @@
     ];
   };
 
+  users.extraGroups.docker.members = ["username-with-access-to-socket"];
+
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users = {
@@ -190,7 +192,13 @@
     "openjdk21".source = jdk21;
   };
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
