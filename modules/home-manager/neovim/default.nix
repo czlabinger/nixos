@@ -2,16 +2,36 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  toLua = str: "lua << EOF\n${str}\nEOF\n";
+  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+in {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      nvim-lspconfig
-      plenary-nvim
-      gruvbox-material
-      mini-nvim
+      {
+        plugin = comment-nvim;
+        config = toLua "require(\"Comment\").setup()";
+      }
+      {
+        plugin = nvim-lspconfig;
+        config = toLuaFile ./nvim/plugin/lsp.lua;
+      }
+      {
+        plugin = plenary-nvim;
+      }
+      {
+        plugin = gruvbox-material;
+        config = "colorscheme gruvbox";
+      }
+      {
+        plugin = mini-nvim;
+      }
+      {
+        plugin = vim-nix;
+      }
 
       (nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
@@ -23,12 +43,10 @@
         p.tree-sitter-java
         p.tree-sitter-rust
       ]))
-
-      vim-nix
     ];
 
-    #extraLuaConfig = ''
-    #  ${buildins.readFile ./nvim/options.lua}
-    #'';
+    extraLuaConfig = ''
+      ${builtins.readFile ./nvim/options.lua}
+    '';
   };
 }
