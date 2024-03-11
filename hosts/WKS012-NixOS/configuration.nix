@@ -97,7 +97,7 @@
     isNormalUser = true;
     description = "Stoffi05";
     shell = pkgs.zsh;
-    extraGroups = ["networkmanager" "wheel" "light"];
+    extraGroups = ["networkmanager" "wheel" "light" "docker"];
     packages = with pkgs; [
       firefox
     ];
@@ -189,6 +189,8 @@
   environment.etc = with pkgs; {
     "openjdk21".source = jdk21;
   };
+
+  virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
