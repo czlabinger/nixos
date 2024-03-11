@@ -23,14 +23,23 @@ in {
         plugin = plenary-nvim;
       }
       {
-        plugin = gruvbox-material;
-        config = "colorscheme gruvbox-material";
+        plugin = gruvbox-nvim;
+        config = "colorscheme gruvbox";
       }
+      neodev-nvim
       {
         plugin = mini-nvim;
       }
       {
         plugin = vim-nix;
+      }
+      {
+        plugin = nvim-cmp;
+        config = toLuaFile ./nvim/plugin/cmp.lua;
+      }
+      {
+        plugin = telescope-nvim;
+        config = toLuaFile ./nvim/plugin/telescope.lua;
       }
 
       (nvim-treesitter.withPlugins (p: [
@@ -43,6 +52,15 @@ in {
         p.tree-sitter-java
         p.tree-sitter-rust
       ]))
+
+      cmp_luasnip
+      cmp-nvim-lsp
+
+      luasnip
+      friendly-snippets
+
+      lualine-nvim
+      nvim-web-devicons
     ];
 
     extraLuaConfig = ''
