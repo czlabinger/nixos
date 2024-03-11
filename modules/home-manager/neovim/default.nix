@@ -24,6 +24,7 @@ in {
       }
       {
         plugin = gruvbox-material;
+        config = "colorscheme gruvbox-material";
       }
       {
         plugin = mini-nvim;
@@ -46,7 +47,6 @@ in {
 
     extraLuaConfig = ''
       ${builtins.readFile ./nvim/options.lua}
-      vim.cmd("colorscheme gruvbox-material")
     '';
   };
 }
