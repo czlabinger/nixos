@@ -182,6 +182,8 @@
     docker
     insomnia
     neofetch
+    flutter
+    hollywood
   ];
 
   programs.java = {
