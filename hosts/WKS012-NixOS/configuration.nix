@@ -173,6 +173,7 @@
     wxmaxima
     notion-app-enhanced
     docker
+    insomnia
   ];
 
   programs.java = {
