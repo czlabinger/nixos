@@ -174,6 +174,7 @@
     notion-app-enhanced
     docker
     insomnia
+    neofetch
   ];
 
   programs.java = {
