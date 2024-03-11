@@ -46,6 +46,7 @@ in {
 
     extraLuaConfig = ''
       ${builtins.readFile ./nvim/options.lua}
+      vim.cmd("colorscheme gruvbox-material")
     '';
   };
 }
