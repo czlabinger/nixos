@@ -172,6 +172,11 @@
     notion-app-enhanced
   ];
 
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk21;
+  };
+
   fonts.packages = with pkgs; [
     material-icons
     roboto-mono
