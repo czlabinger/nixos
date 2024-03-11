@@ -185,6 +185,7 @@
     flutter
     hollywood
     gimp-with-plugins
+    whatsapp-for-linux
   ];
 
   programs.java = {
