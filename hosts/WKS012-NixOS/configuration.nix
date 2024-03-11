@@ -189,6 +189,10 @@
     neovide
   ];
 
+  environment.interactiveShellInit = ''
+    alias nvim='neovide $1'
+  '';
+
   programs.java = {
     enable = true;
     package = pkgs.jdk21;
