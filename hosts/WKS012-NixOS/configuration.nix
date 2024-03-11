@@ -184,6 +184,7 @@
     neofetch
     flutter
     hollywood
+    gimp-with-plugins
   ];
 
   programs.java = {
