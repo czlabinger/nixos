@@ -6,7 +6,6 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
     hypridle.url = "github:hyprwm/hypridle";
-    guifetch.url = "github:flafydev/guifetch";
 
     home-manager = {
       url = "github:nix-community/home-manager";

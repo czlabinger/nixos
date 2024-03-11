@@ -89,6 +89,13 @@
     #media-session.enable = true;
   };
 
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [mesa];
+    driSupport32Bit = true;
+    extraPackages32 = with pkgs.pkgsi686Linux; [mesa];
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
