@@ -221,7 +221,7 @@
         "ControlShiftAltSuper, Delete, exec, systemctl poweroff"
 
         #################### Screenshot ####################
-        "SuperShift, S, exec, grim -g '$(slurp -d)' - | wl-copy"
+        "SuperShift, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
         "SuperShift, N, exec, playerctl next || playerctl position `bc <<< \"100 * $(playerctl metadata mpris:length) / 1000000 / 100\"`"
         "SuperShift, B, exec, playerctl previous"
         "SuperShift, P, exec, playerctl play-pause"

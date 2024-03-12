@@ -156,7 +156,7 @@
         home_symbol = "  ";
         read_only = "  ";
         style = "bg:blue fg:black";
-        truncation_length = 15;
+        truncation_length = 25;
         truncation_symbol = "••/";
         format = "[](bold fg:blue)[$path ]($style)[](bold fg:blue)";
         substitutions = {

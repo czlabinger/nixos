@@ -1,5 +1,7 @@
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {},
+    ensure_installed = {
+		java
+	},
 
     auto_install = true,
 

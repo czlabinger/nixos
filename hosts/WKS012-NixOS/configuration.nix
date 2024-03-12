@@ -25,7 +25,7 @@
   nix.settings.auto-optimise-store = true;
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 14d";
+  nix.gc.options = "--delete-older-than 7d";
 
   networking.hostName = "WKS012-NixOS";
   #networking.wireless.enable = true;
@@ -188,6 +188,19 @@
     whatsapp-for-linux
     neovim
     neovide
+    nodePackages.typescript
+    luajitPackages.lua-lsp
+    python3
+    nodejs_21
+    nodePackages_latest.bash-language-server
+    nodePackages_latest.pyright
+    vlc
+    spotify
+    cargo
+    rustup
+    rust-analyzer
+    candy-icons
+    yarn
   ];
 
   environment.interactiveShellInit = ''

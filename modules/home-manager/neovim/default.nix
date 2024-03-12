@@ -13,6 +13,8 @@ in {
     extraPackages = with pkgs; [
       lua-language-server
       rnix-lsp
+      rust-analyzer
+      pyright
 
       xclip
       wl-clipboard
@@ -34,7 +36,6 @@ in {
         plugin = gruvbox-nvim;
         config = "colorscheme gruvbox";
       }
-      neodev-nvim
       {
         plugin = mini-nvim;
       }
@@ -47,7 +48,11 @@ in {
       }
       {
         plugin = telescope-nvim;
-        config = toLuaFile ./nvim/plugin/telescope.lua;
+      }
+      nerdtree
+      {
+        plugin = startup-nvim;
+        config = toLua "require(\"startup\").setup({theme = \"dashboard\"})";
       }
 
       (nvim-treesitter.withPlugins (p: [
@@ -61,18 +66,44 @@ in {
         p.tree-sitter-rust
       ]))
 
+      neodev-nvim
+      noice-nvim
+
       cmp_luasnip
       cmp-nvim-lsp
 
       luasnip
       friendly-snippets
 
-      lualine-nvim
+      vim-floaterm
+
+      {
+        plugin = lualine-nvim;
+        config = toLuaFile ./nvim/plugin/lualine.lua;
+      }
+
       nvim-web-devicons
+
+      vim-devicons
+
+      nvim-dap
+      mason-nvim
+      nvim-autopairs
+
+      {
+        plugin = todo-comments-nvim;
+        config = toLua "require('nvim-autopairs').setup()";
+      }
+      {
+        plugin = neogit;
+        config = toLua "require('neogit').setup()";
+      }
+      markdown-preview-nvim
     ];
 
     extraLuaConfig = ''
       ${builtins.readFile ./nvim/options.lua}
+      ${builtins.readFile ./nvim/mappings.lua}
     '';
   };
 }
