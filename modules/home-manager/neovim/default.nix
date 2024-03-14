@@ -102,7 +102,10 @@ in {
       mkdir-nvim
       project-nvim
       refactoring-nvim
-      telescope-media-files-nvim
+      {
+        plugin = telescope-media-files-nvim;
+        config = toLua "require('telescope').load_extension('media_files')";
+      }
     ];
 
     extraLuaConfig = ''
