@@ -58,9 +58,25 @@
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+  # plain files is through 'home.file'.text
   home.file = {
     ".jdk".source = pkgs.jdk21;
+
+    ".config/hypr/scripts/wofi_helper.sh" = {
+      text = ''
+
+        #!/usr/bin/env bash
+
+        if pgrep -x "wofi" > /dev/null
+        then
+          pkill wofi
+        else
+          wofi &
+        fi
+
+      '';
+      executable = true;
+    };
   };
 
   # 'home.sessionVariables'. # Change env variables

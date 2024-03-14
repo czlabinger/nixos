@@ -200,6 +200,7 @@
     rustup
     rust-analyzer
     yarn
+    mesa
   ];
 
   environment.interactiveShellInit = ''
