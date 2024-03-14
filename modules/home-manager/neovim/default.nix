@@ -99,6 +99,10 @@ in {
         config = toLua "require('neogit').setup()";
       }
       markdown-preview-nvim
+      mkdir-nvim
+      project-nvim
+      refactoring-nvim
+      telescope-media-files-nvim
     ];
 
     extraLuaConfig = ''
