@@ -23,36 +23,39 @@ in {
     plugins = with pkgs.vimPlugins; [
       {
         plugin = comment-nvim;
-        config = toLua "require(\"Comment\").setup()";
+        config = toLua "require('Comment').setup()";
       }
       {
         plugin = nvim-lspconfig;
         config = toLuaFile ./nvim/plugin/lsp.lua;
       }
       {
-        plugin = plenary-nvim;
-      }
-      {
         plugin = gruvbox-nvim;
         config = "colorscheme gruvbox";
       }
       {
-        plugin = mini-nvim;
+        plugin = lualine-nvim;
+        config = toLuaFile ./nvim/plugin/lualine.lua;
       }
       {
-        plugin = vim-nix;
+        plugin = todo-comments-nvim;
+        config = toLua "require('nvim-autopairs').setup()";
+      }
+      {
+        plugin = neogit;
+        config = toLua "require('neogit').setup()";
       }
       {
         plugin = nvim-cmp;
         config = toLuaFile ./nvim/plugin/cmp.lua;
       }
       {
-        plugin = telescope-nvim;
-      }
-      nerdtree
-      {
         plugin = startup-nvim;
-        config = toLua "require(\"startup\").setup({theme = \"dashboard\"})";
+        config = toLua "require('startup').setup({theme = \"dashboard\"})";
+      }
+      {
+        plugin = telescope-media-files-nvim;
+        config = toLua "require('telescope').load_extension('media_files')";
       }
 
       (nvim-treesitter.withPlugins (p: [
@@ -68,44 +71,25 @@ in {
 
       neodev-nvim
       noice-nvim
-
       cmp_luasnip
       cmp-nvim-lsp
-
       luasnip
       friendly-snippets
-
       vim-floaterm
-
-      {
-        plugin = lualine-nvim;
-        config = toLuaFile ./nvim/plugin/lualine.lua;
-      }
-
+      telescope-nvim
+      nerdtree
       nvim-web-devicons
-
       vim-devicons
-
       nvim-dap
       mason-nvim
       nvim-autopairs
-
-      {
-        plugin = todo-comments-nvim;
-        config = toLua "require('nvim-autopairs').setup()";
-      }
-      {
-        plugin = neogit;
-        config = toLua "require('neogit').setup()";
-      }
+      plenary-nvim
       markdown-preview-nvim
       mkdir-nvim
       project-nvim
       refactoring-nvim
-      {
-        plugin = telescope-media-files-nvim;
-        config = toLua "require('telescope').load_extension('media_files')";
-      }
+      mini-nvim
+      vim-nix
     ];
 
     extraLuaConfig = ''
