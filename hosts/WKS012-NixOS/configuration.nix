@@ -201,6 +201,7 @@
     rust-analyzer
     yarn
     mesa
+    mupdf
   ];
 
   environment.interactiveShellInit = ''
