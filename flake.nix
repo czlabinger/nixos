@@ -6,6 +6,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     hyprlock.url = "github:hyprwm/hyprlock";
     hypridle.url = "github:hyprwm/hypridle";
+    hyprcursor.url = "github:hyprwm/hyprcursor";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -17,6 +18,7 @@
     self,
     nixpkgs,
     hyprland,
+    hyprcursor,
     ...
   } @ inputs: let
     system = "x86_64-linux";
