@@ -203,6 +203,7 @@
     mesa
     mupdf
     steam
+    light
   ];
 
   environment.interactiveShellInit = ''
@@ -259,6 +260,7 @@
 
   system.stateVersion = "23.11"; # Don't edit!
 
+  programs.light.enable = true;
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
