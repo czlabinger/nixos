@@ -202,6 +202,7 @@
     yarn
     mesa
     mupdf
+    steam
   ];
 
   environment.interactiveShellInit = ''
