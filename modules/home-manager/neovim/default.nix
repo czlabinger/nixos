@@ -12,9 +12,9 @@ in {
 
     extraPackages = with pkgs; [
       lua-language-server
-      rnix-lsp
       rust-analyzer
       pyright
+      nil
 
       xclip
       wl-clipboard

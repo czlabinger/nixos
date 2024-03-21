@@ -42,10 +42,6 @@ local on_attach = function(_, bufnr)
       }
   }
   
-  require('lspconfig').rnix.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-  }
   require('lspconfig').bashls.setup {}
   require('lspconfig').pyright.setup {}
   require('lspconfig').rust_analyzer.setup {}

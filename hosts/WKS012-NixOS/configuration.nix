@@ -127,6 +127,7 @@
   environment.systemPackages = with pkgs; [
     dunst
     vim
+    wireplumber
     wget
     tree
     vscode
@@ -184,7 +185,6 @@
     neofetch
     flutter
     hollywood
-    gimp-with-plugins
     whatsapp-for-linux
     neovim
     neovide
@@ -204,6 +204,8 @@
     mupdf
     steam
     light
+    nil
+    gimp
   ];
 
   environment.interactiveShellInit = ''
