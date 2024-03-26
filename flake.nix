@@ -7,6 +7,7 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hypridle.url = "github:hyprwm/hypridle";
     hyprcursor.url = "github:hyprwm/hyprcursor";
+    waybar.url = "github:Alexays/Waybar";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -19,11 +20,13 @@
     nixpkgs,
     hyprland,
     hyprcursor,
+    waybar,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
+    packages.${system}.waybar = waybar.packages.${system}.default;
     nixosConfigurations.WKS012-NixOS = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
