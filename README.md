@@ -14,6 +14,24 @@
 
 I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
 
+## Hosts
+
+* WKS012-NixOS
+    * My Laptop I mainly use for school stuff.
+* ISO
+    * Used to generate an ISO image with the stuff I need to do basic work.
+* WKS011-NixOS
+    * TODO: Will be my PC setup if I get around to do it.
+
+## Installation
+
+```
+git clone git@github.com:czlabinger/nixos.git
+cd nixos
+cp /etc/nixos/hardware-configuration.nix ./hosts/WKS012-NixOS/
+sudo nixos-rebuild --flake .#WKS012-NixOS switch
+```
+
 ## Thanks to
 - [vimjoyer](https://www.youtube.com/@vimjoyer) for their videos
 - [nomadics9](https://github.com/nomadics9/NixOS-Flake) for their waybar config

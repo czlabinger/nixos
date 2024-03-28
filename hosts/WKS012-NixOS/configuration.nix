@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -209,6 +208,7 @@
     adw-gtk3
     qogir-icon-theme
     virt-manager
+    google-chrome
   ];
 
   environment.interactiveShellInit = ''
@@ -273,4 +273,7 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  services.dbus.packages = with pkgs; [
+    xfce.xfconf
+  ];
 }
