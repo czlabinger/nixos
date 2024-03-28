@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
   ];
 
   environment.systemPackages = with pkgs; [
@@ -18,10 +18,8 @@
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
   programs.hyprland.enable = true;
 }

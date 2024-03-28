@@ -1,11 +1,12 @@
 {
-  config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
     ./hyprlock.nix
     ./hypridle.nix
+    inputs.hyprland.homeManagerModules.default
   ];
 
   home.packages = with pkgs; [

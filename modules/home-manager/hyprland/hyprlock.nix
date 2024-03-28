@@ -1,13 +1,11 @@
-{
-  inputs,
-  config,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.hyprlock.homeManagerModules.default
   ];
+
   programs.hyprlock = {
     enable = true;
+
     general = {
       disable_loading_bar = false;
       hide_cursor = true;
@@ -49,6 +47,7 @@
     labels = [
       {
         # Clock
+        monitor = "";
         text = ''cmd[update:100] echo "<b>$(date +'%_I:%M:%S')</b>"'';
         position = {
           x = 0;
@@ -62,6 +61,7 @@
       }
       {
         # Greeting
+        monitor = "";
         text = ''hi <span foreground="##663c2e">$USER</span>'';
         position = {
           x = 0;
@@ -75,6 +75,7 @@
       }
       {
         # Lock icon
+        monitor = "";
         text = "lock";
         position = {
           x = 0;
@@ -88,6 +89,7 @@
       }
       {
         # Locked text
+        monitor = "";
         text = "locked";
         position = {
           x = 0;
@@ -101,6 +103,7 @@
       }
       {
         # Status
+        monitor = "";
         text = ''cmd[update:5000] ~/.config/hypr/scripts/status.sh'';
         position = {
           x = 30;

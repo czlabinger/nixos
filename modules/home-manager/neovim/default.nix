@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   toLua = str: "lua << EOF\n${str}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
 in {
@@ -57,7 +53,10 @@ in {
         plugin = telescope-media-files-nvim;
         config = toLua "require('telescope').load_extension('media_files')";
       }
-
+      {
+        plugin = presence-nvim;
+        config = toLua "require('presence').setup({})";
+      }
       (nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-vim
@@ -69,6 +68,7 @@ in {
         p.tree-sitter-rust
       ]))
 
+      telescope-nvim
       neodev-nvim
       noice-nvim
       cmp_luasnip
@@ -76,7 +76,6 @@ in {
       luasnip
       friendly-snippets
       vim-floaterm
-      telescope-nvim
       nerdtree
       nvim-web-devicons
       vim-devicons

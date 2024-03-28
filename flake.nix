@@ -8,7 +8,6 @@
     hypridle.url = "github:hyprwm/hypridle";
     hyprcursor.url = "github:hyprwm/hyprcursor";
     waybar.url = "github:Alexays/Waybar";
-    guifetch.url = "github:FlafyDev/guifetch";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -19,16 +18,17 @@
   outputs = {
     self,
     nixpkgs,
+    home-manager,
     hyprland,
+    hyprlock,
+    hypridle,
     hyprcursor,
     waybar,
-    guifetch,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    packages.${system}.guifetch = guifetch.packages.${system}.default;
     nixosConfigurations.WKS012-NixOS = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [

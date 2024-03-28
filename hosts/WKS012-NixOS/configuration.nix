@@ -20,7 +20,7 @@
     };
   };
 
-  # Delete older than 14d
+  # Delete older than 7d
   nix.settings.auto-optimise-store = true;
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
@@ -209,6 +209,8 @@
     qogir-icon-theme
     virt-manager
     google-chrome
+    discord
+    glxinfo
   ];
 
   environment.interactiveShellInit = ''
