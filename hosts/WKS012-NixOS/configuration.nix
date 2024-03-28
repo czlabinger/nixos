@@ -205,6 +205,9 @@
     light
     nil
     gimp
+    bibata-cursors
+    adw-gtk3
+    qogir-icon-theme
   ];
 
   environment.interactiveShellInit = ''

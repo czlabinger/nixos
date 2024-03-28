@@ -79,6 +79,18 @@
     };
   };
 
+  gtk = {
+    enable = true;
+    cursorTheme.package = pkgs.bibata-cursors;
+    cursorTheme.name = "Bibata-Original-Classic";
+
+    theme.package = pkgs.adw-gtk3;
+    theme.name = "adw-gtk3";
+
+    iconTheme.package = pkgs.qogir-icon-theme;
+    iconTheme.name = "Qogir";
+  };
+
   # 'home.sessionVariables'. # Change env variables
 
   programs.home-manager.enable = true;

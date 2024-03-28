@@ -45,3 +45,4 @@ local on_attach = function(_, bufnr)
   require('lspconfig').bashls.setup {}
   require('lspconfig').pyright.setup {}
   require('lspconfig').rust_analyzer.setup {}
+  require('lspconfig').nil_ls.setup{}
