@@ -286,7 +286,6 @@
       ];
 
       #################### Env ####################
-
       env = [
         "QT_IM_MODULE, fcitx"
         "XMODIFIERS, @im=fcitx"
@@ -296,6 +295,8 @@
         "QT_QPA_PLATFORM, wayland"
         "QT_QPA_PLATFORMTHEME, qt5ct"
         "WLR_NO_HARDWARE_CURSORS, 1"
+        "HYPRCURSOR_THEME,Bibata-Original-Classic"
+        "HYPRCURSOR_SIZE,24"
       ];
 
       #################### Execs ####################
@@ -313,6 +314,9 @@
         # Clipboard: history
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+
+        # Cursor
+        "hyprctl setcursor Bibata-Original-Classic 24"
       ];
     };
   };

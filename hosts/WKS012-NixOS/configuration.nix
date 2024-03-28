@@ -104,7 +104,7 @@
     isNormalUser = true;
     description = "Stoffi05";
     shell = pkgs.zsh;
-    extraGroups = ["networkmanager" "wheel" "light" "docker"];
+    extraGroups = ["networkmanager" "wheel" "light" "docker" "libvirtd"];
     packages = with pkgs; [
       firefox
     ];
@@ -208,6 +208,7 @@
     bibata-cursors
     adw-gtk3
     qogir-icon-theme
+    virt-manager
   ];
 
   environment.interactiveShellInit = ''
@@ -268,4 +269,8 @@
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
 }

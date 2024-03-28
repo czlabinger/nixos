@@ -26,12 +26,18 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    packages.${system}.waybar = waybar.packages.${system}.default;
     nixosConfigurations.WKS012-NixOS = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/WKS012-NixOS/configuration.nix
         inputs.home-manager.nixosModules.default
+      ];
+    };
+
+    nixosConfigurations.ISO = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/iso/configuration.nix
       ];
     };
   };
