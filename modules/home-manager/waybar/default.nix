@@ -11,13 +11,9 @@
         modules-right = ["network" "pulseaudio" "backlight" "battery" "clock" "tray" "hyprland/language" "custom/wallpaper" "custom/power-menu"];
 
         "hyprland/workspaces" = {
-          format = "{name}";
+          format = "{icon}";
           all-outputs = true;
           on-click = "activate";
-          format-icons = {
-            active = " 󱎴";
-            default = "󰍹";
-          };
           persistent-workspaces = {
             "1" = [];
             "2" = [];
@@ -29,6 +25,18 @@
             "8" = [];
             "9" = [];
             "10" = [];
+          };
+          format-icons = {
+            "1" = "一";
+            "2" = "二";
+            "3" = "三";
+            "4" = "四";
+            "5" = "五";
+            "6" = "六";
+            "7" = "七";
+            "8" = "八";
+            "9" = "九";
+            "10" = "十";
           };
         };
         "hyprland/language" = {
