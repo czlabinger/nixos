@@ -6,9 +6,9 @@
       mainBar = {
         height = 20;
         layer = "top";
-        modules-left = ["custom/launcher" "cpu" "memory" "custom/weather" "hyprland/workspaces"];
+        modules-left = ["custom/launcher" "cpu" "memory" "hyprland/workspaces"];
         modules-center = ["mpris"];
-        modules-right = ["network" "pulseaudio" "backlight" "battery" "clock" "tray" "hyprland/language" "custom/wallpaper" "custom/power-menu"];
+        modules-right = ["network" "pulseaudio" "backlight" "battery" "clock" "tray"];
 
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -141,11 +141,6 @@
           format-icons = ["󱊡" "󱊢" "󱊣"];
         };
 
-        "custom/weather" = {
-          restart-interval = 300;
-          return-type = "json";
-        };
-
         "mpris" = {
           format = "{player_icon} {title}";
           format-paused = " {status_icon} <i>{title}</i>";
@@ -165,14 +160,6 @@
           on-click = "playerctl play-pause";
           on-double-click-right = "playerctl next";
           on-scroll-down = "playerctl previous";
-        };
-
-        "custom/power-menu" = {
-          format = "{percentage}Hz";
-          on-click = "~/.config/hypr/scripts/screenHz.sh";
-          return-type = "json";
-          interval = 1;
-          tooltip = false;
         };
 
         "custom/launcher" = {
@@ -207,7 +194,6 @@
       }
 
       #clock,
-      #temperature,
       #mpris,
       #cpu,
       #memory,
@@ -218,18 +204,7 @@
       #workspaces,
       #idle_inhibitor,
       #custom-launcher,
-      #custom-spotify,
-      #custom-weather,
-      #custom-weather.severe,
-      #custom-weather.sunnyDay,
-      #custom-weather.clearNight,
-      #custom-weather.cloudyFoggyDay,
-      #custom-weather.cloudyFoggyNight,
-      #custom-weather.rainyDay,
-      #custom-weather.rainyNight,
-      #custom-weather.showyIcyDay,
-      #custom-weather.snowyIcyNight,
-      #custom-weather.default {
+      #custom-spotify {
         color: #e5e5e5;
         border-radius: 6px;
         padding: 2px 10px;
@@ -242,9 +217,6 @@
 
         margin-top: 8.5px;
         margin-bottom: 8.5px;
-      }
-      #temperature{
-        color: #7a95c9;
       }
       #cpu {
         color: #fb958b;
@@ -428,47 +400,6 @@
         margin-top: 7px;
         margin-bottom: 7px;
       }
-      #language {
-        color: #8a909e;
-        font-family: Iosevka Nerd Font;
-        font-weight: bold;
-        border-radius : 8px 0 0 8px;
-        margin-top: 7px;
-        margin-bottom: 7px;
-      }
-
-      #custom-power-menu {
-        color: #8a909e;
-        margin-right: 12px;
-        border-radius: 8px;
-        padding: 0 6px 0 6.8px;
-        border-radius: 0 8px 8px 0;
-        margin-top: 7px;
-        margin-bottom: 7px;
-      }
-      #custom-wallpaper {
-        color: #8a909e;
-        padding-right: 7;
-        padding-left: 7;
-      }
-      #custom-wallpaper,
-      #language,
-      #custom-power-menu {
-        background-color: #252733;
-        padding: 0em 2em;
-
-        font-size: 17px;
-
-        padding-left: 7.5px;
-        padding-right: 7.5px;
-
-        padding-top: 3px;
-        padding-bottom: 3px;
-
-        margin-top: 7px;
-        margin-bottom: 7px;
-      }
-
       tooltip {
         font-family: Iosevka Nerd Font;
         border-radius: 15px;
