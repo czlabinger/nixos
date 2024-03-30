@@ -39,6 +39,7 @@
             "10" = "十";
           };
         };
+
         "hyprland/language" = {
           format = "{short}";
         };
@@ -47,9 +48,11 @@
           max-length = 200;
           separate-outputs = true;
         };
+
         "tray" = {
           spacing = 10;
         };
+
         "clock" = {
           format = "{:%H:%M}";
           format-alt = "{:%b %d %Y}";
@@ -66,11 +69,6 @@
           interval = 30;
           format = " {}%";
           format-alt = " {used:0.1f}GB";
-          max-length = 10;
-        };
-        "temperature" = {
-          interval = 10;
-          format = " {temperatureC}°C";
           max-length = 10;
         };
         "backlight" = {
@@ -94,17 +92,6 @@
           interval = 1;
           on-click = "foot sleep 0.01 && nmtui";
           format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
-        };
-
-        "bluetooth" = {
-          format = "{icon}";
-          format-alt = "bluetooth: {status}";
-          interval = 30;
-          format-icons = {
-            enabled = "";
-            disabled = "󰂲";
-          };
-          tooltip-format = "{status}";
         };
 
         "pulseaudio" = {
@@ -154,14 +141,6 @@
           };
         };
 
-        "custom/spotify" = {
-          format = " {}";
-          return-type = "json";
-          on-click = "playerctl play-pause";
-          on-double-click-right = "playerctl next";
-          on-scroll-down = "playerctl previous";
-        };
-
         "custom/launcher" = {
           format = "󱄅";
           on-click = "wofi --show drun &";
@@ -203,8 +182,7 @@
       #custom-lock,
       #workspaces,
       #idle_inhibitor,
-      #custom-launcher,
-      #custom-spotify {
+      #custom-launcher {
         color: #e5e5e5;
         border-radius: 6px;
         padding: 2px 10px;
@@ -273,7 +251,6 @@
         margin-top: 8.5px;
         margin-bottom: 8.5px;
       }
-      #bluetooth,
       #backlight,
       #battery,
       #pulseaudio,
@@ -319,27 +296,13 @@
         color: #5E81AC;
         border-radius: 8px 0px 0px 8px;
         padding-left: 14px;
-        padding-right: 14px;
+        padding-right: 10px;
         font-size: 20px;
       }
 
       #network.disconnected {
         color: #fb958b;
       }
-
-      #bluetooth {
-        padding-left: 0.2em;
-        color: #5E81AC;
-        border-radius: 8px 0px 0px 8px;
-        padding-left: 14px;
-        padding-right: 14px;
-        font-size: 20px;
-      }
-
-      #bluetooth.disconnected {
-        color: #fb958b;
-      }
-
 
       #battery {
         color: #8fbcbb;
@@ -441,8 +404,7 @@
         background-color: #ecf0f1;
         color: #2d3436;
       }
-      #mpris,
-      #custom-spotify {
+      #mpris {
         color: #abb2bf;
       }
 
