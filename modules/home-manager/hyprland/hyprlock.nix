@@ -13,7 +13,7 @@
 
     backgrounds = [
       {
-        path = "screenshot";
+        path = "/home/stoffi05/Pictures/lucy.png";
         blur_passes = 4;
         blur_size = 4;
         contrast = 1.2;
@@ -62,7 +62,7 @@
       {
         # Greeting
         monitor = "";
-        text = ''hi <span foreground="##663c2e">$USER</span>'';
+        text = ''hi $USER'';
         position = {
           x = 0;
           y = 240;
@@ -72,48 +72,6 @@
         color = "rgba(ede0deFF)";
         halign = "center";
         valign = "center";
-      }
-      {
-        # Lock icon
-        monitor = "";
-        text = "lock";
-        position = {
-          x = 0;
-          y = 65;
-        };
-        font_family = "Material Symbols Rounded";
-        font_size = 21;
-        color = "rgba(ede0deFF)";
-        halign = "center";
-        valign = "bottom";
-      }
-      {
-        # Locked text
-        monitor = "";
-        text = "locked";
-        position = {
-          x = 0;
-          y = 50;
-        };
-        font_family = "JetBrainsMono";
-        font_size = 14;
-        color = "rgba(ede0deFF)";
-        halign = "center";
-        valign = "bottom";
-      }
-      {
-        # Status
-        monitor = "";
-        text = ''cmd[update:5000] ~/.config/hypr/scripts/status.sh'';
-        position = {
-          x = 30;
-          y = -30;
-        };
-        font_family = "JetBrainsMono";
-        font_size = 14;
-        color = "rgba(ede0deFF)";
-        halign = "left";
-        valign = "top";
       }
     ];
   };
