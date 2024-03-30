@@ -16,7 +16,7 @@ I'm new to NixOS so please if you have any recommendations or something I can im
 
 ## Showcase
 
-![image](https://github.com/czlabinger/nixos/assets/1.png)
+![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/1.png)
 
 ## Hosts
 
