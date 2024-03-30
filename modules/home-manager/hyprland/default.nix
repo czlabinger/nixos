@@ -205,7 +205,7 @@
         "SuperShift, B, exec, baobab / &"
         "Super, T, exec, kitty"
         "SuperShiftAlt, T, exec, kitty sleep 0.01 && nmtui"
-        "Super, Return, exec, kitty"
+        "Super, Return, exec, foot"
         "Super, E, exec, thunar"
         "Super, W, exec, firefox"
         "Super, X, exec, gnome-text-editor --new-window"
