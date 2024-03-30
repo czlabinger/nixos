@@ -7,6 +7,8 @@
     ../../modules/home-manager/starship
     ../../modules/home-manager/wofi
     ../../modules/home-manager/neovim
+    ../../modules/home-manager/kitty
+    ../../modules/home-manager/neofetch
   ];
 
   home.username = "stoffi05";
