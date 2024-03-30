@@ -30,8 +30,7 @@ I'm new to NixOS so please if you have any recommendations or something I can im
 ## Installation
 
 ```
-git clone git@github.com:czlabinger/nixos.git
-cd nixos
+git clone git@github.com:czlabinger/nixos.git && cd nixos
 cp /etc/nixos/hardware-configuration.nix ./hosts/WKS012-NixOS/
 sudo nixos-rebuild --flake .#WKS012-NixOS switch
 ```
