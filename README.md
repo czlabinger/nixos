@@ -14,6 +14,8 @@
 
 I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
 
+Neofetch and hyprlock use absolute image paths! Make sure you change them!
+
 ## Showcase
 
 ![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/1.png)
