@@ -14,6 +14,10 @@
 
 I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
 
+## Showcase
+
+![image](https://github.com/czlabinger/nixos/assets/1.png)
+
 ## Hosts
 
 * WKS012-NixOS
