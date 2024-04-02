@@ -212,6 +212,7 @@
     google-chrome
     discord
     glxinfo
+    python311Packages.pip
   ];
 
   environment.interactiveShellInit = ''
