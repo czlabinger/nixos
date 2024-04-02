@@ -214,6 +214,7 @@
     glxinfo
     python311Packages.pip
     arduino-ide
+    arduino-language-server
   ];
 
   environment.interactiveShellInit = ''

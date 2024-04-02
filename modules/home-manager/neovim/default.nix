@@ -11,6 +11,7 @@ in {
       rust-analyzer
       pyright
       nil
+      arduino-language-server
 
       xclip
       wl-clipboard
