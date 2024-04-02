@@ -46,4 +46,3 @@ local on_attach = function(_, bufnr)
   require('lspconfig').pyright.setup {}
   require('lspconfig').rust_analyzer.setup {}
   require('lspconfig').nil_ls.setup {}
-  require('lspconfig').arduino_language_server.setup {}
