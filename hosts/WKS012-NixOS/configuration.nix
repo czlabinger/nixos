@@ -213,7 +213,7 @@
     discord
     glxinfo
     python311Packages.pip
-    arduino
+    arduino-ide
   ];
 
   environment.interactiveShellInit = ''
