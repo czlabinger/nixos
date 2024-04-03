@@ -222,6 +222,7 @@
     libsForQt5.qt5.qtgraphicaleffects
     appimage-run
     virtio-win
+    virtiofsd
   ];
 
   environment.interactiveShellInit = ''
