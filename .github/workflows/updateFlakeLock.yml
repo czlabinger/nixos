@@ -9,9 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
+      - name: Setup Account to commit
+        run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@main
         with:
