@@ -3,7 +3,7 @@
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/waybar
     ../../modules/home-manager/foot
-    ../../modules/home-manager/oh-my-zsh
+    ../../modules/home-manager/zsh
     ../../modules/home-manager/starship
     ../../modules/home-manager/wofi
     ../../modules/home-manager/neovim
