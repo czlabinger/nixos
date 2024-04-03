@@ -9,6 +9,7 @@
     ../../modules/home-manager/neovim
     ../../modules/home-manager/kitty
     ../../modules/home-manager/neofetch
+    ../../modules/home-manager/firefox
   ];
 
   home.username = "stoffi05";
