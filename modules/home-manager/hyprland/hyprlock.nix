@@ -48,7 +48,7 @@
       {
         # Clock
         monitor = "";
-        text = ''cmd[update:100] echo "<b>$(date +'%_I:%M:%S')</b>"'';
+        text = ''cmd[update:100] echo "<b>$(date + "%T")</b>"'';
         position = {
           x = 0;
           y = 300;
