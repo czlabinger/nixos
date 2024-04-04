@@ -13,7 +13,7 @@
 
     backgrounds = [
       {
-        path = "/home/stoffi05/Pictures/lucy.png";
+        path = "screenshot";
         blur_passes = 4;
         blur_size = 4;
         contrast = 1.2;

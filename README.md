@@ -14,7 +14,7 @@
 
 I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
 
-Neofetch and hyprlock use absolute image paths! Make sure you change them!
+Neofetch uses ab absolute image path! Make sure you change it!
 
 ## Showcase
 
