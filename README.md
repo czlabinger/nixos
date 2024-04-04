@@ -20,6 +20,7 @@ Neofetch and hyprlock use absolute image paths! Make sure you change them!
 
 ![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/1.png)
 ![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)
+![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/3.png)
 
 
 ## Hosts
