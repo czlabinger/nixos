@@ -18,9 +18,14 @@ Neofetch and hyprlock use absolute image paths! Make sure you change them!
 
 ## Showcase
 
-![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/1.png)
-![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)
-![image](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/3.png)
+### Desktop
+![desktop](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/1.png)
+
+### Neovim
+![neovim](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)
+
+### Launcher
+![launcher](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/3.png)
 
 
 ## Hosts
