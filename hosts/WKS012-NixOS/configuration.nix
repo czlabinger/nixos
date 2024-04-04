@@ -204,7 +204,6 @@
     yarn
     mesa
     mupdf
-    steam
     light
     nil
     gimp
