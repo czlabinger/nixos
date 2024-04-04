@@ -132,7 +132,7 @@
     dunst
     vim
     wget
-    tree
+    #tree
     vscode
     git
     alejandra
@@ -222,10 +222,13 @@
     appimage-run
     virtio-win
     virtiofsd
+    lsd
   ];
 
   environment.interactiveShellInit = ''
     alias nvim='neovide $1'
+    alias tree='lsd --tree'
+    alias ls='lsd $1'
   '';
 
   programs.java = {

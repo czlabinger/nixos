@@ -20,6 +20,7 @@ Neofetch and hyprlock use absolute image paths! Make sure you change them!
 
 ### Desktop
 ![desktop](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/1.png)
+![tree](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/4.png)
 
 ### Neovim
 ![neovim](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)

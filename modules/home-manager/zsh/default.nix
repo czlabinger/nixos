@@ -2,11 +2,16 @@
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ls = "lsd $1";
+    };
+
     oh-my-zsh = {
       enable = true;
       plugins = ["git" "sudo" "colored-man-pages"];
       theme = "agnoster";
     };
-    syntaxHighlighting.enable = true;
   };
 }
