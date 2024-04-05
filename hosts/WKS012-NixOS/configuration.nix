@@ -107,7 +107,7 @@
     isNormalUser = true;
     description = "Stoffi05";
     shell = pkgs.zsh;
-    extraGroups = ["networkmanager" "wheel" "light" "docker" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "video" "docker" "libvirtd"];
     packages = with pkgs; [
       firefox
     ];

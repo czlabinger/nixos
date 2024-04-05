@@ -45,7 +45,7 @@
         ahead = " 🏎💨 ";
         behind = " 😰 ";
         diverged = " 😵 ";
-        untracked = " 🤷 ‍";
+        untracked = " 🤷 ";
         stashed = " 📦 ";
         modified = " 📝 ";
         staged = "[++\($count\)](blue)";
