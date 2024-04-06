@@ -7,7 +7,7 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader.
+  # Bootloader
   boot.loader = {
     efi = {
       canTouchEfiVariables = true;
