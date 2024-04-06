@@ -185,7 +185,6 @@
     docker
     insomnia
     neofetch
-    flutter
     hollywood
     whatsapp-for-linux
     neovim
@@ -223,6 +222,10 @@
     virtio-win
     virtiofsd
     lsd
+    libglvnd
+    glibc
+    flutter
+    dart
   ];
 
   environment.interactiveShellInit = ''
