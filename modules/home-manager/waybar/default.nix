@@ -77,8 +77,8 @@
           tooltip = true;
           format-alt = "<small>{percent}%</small>";
           format-icons = ["󱩎" "󱩏" "󱩐" "󱩑" "󱩒" "󱩓" "󱩔" "󱩕" "󱩖" "󰛨"];
-          on-scroll-up = "light -A 1";
-          on-scroll-down = "light -U 5";
+          on-scroll-down = "light -A 1";
+          on-scroll-up = "light -U 5";
           smooth-scrolling-threshold = "2400";
           tooltip-format = "Brightness {percent}%";
         };
