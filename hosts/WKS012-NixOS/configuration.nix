@@ -215,6 +215,7 @@
     glxinfo
     python311Packages.pip
     arduino-ide
+    arduino
     nixos-icons
     nix-prefetch-git
     libsForQt5.qt5.qtgraphicaleffects
