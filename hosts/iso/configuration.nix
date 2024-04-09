@@ -5,6 +5,7 @@
 }: {
   imports = [
     "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
+    "${modulesPath}/installer/cd-dvd/channel.nix"
   ];
 
   environment.systemPackages = with pkgs; [

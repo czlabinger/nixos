@@ -228,6 +228,8 @@
     flutter
     dart
     libsForQt5.ark
+    pv
+    kdePackages.polkit-kde-agent-1
   ];
 
   environment.interactiveShellInit = ''
