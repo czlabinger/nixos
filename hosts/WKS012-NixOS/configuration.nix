@@ -230,6 +230,7 @@
     libsForQt5.ark
     pv
     kdePackages.polkit-kde-agent-1
+    gnome-multi-writer
   ];
 
   environment.interactiveShellInit = ''
