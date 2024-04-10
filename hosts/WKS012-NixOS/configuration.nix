@@ -232,6 +232,7 @@
     pv
     kdePackages.polkit-kde-agent-1
     gnome-multi-writer
+    dconf
   ];
 
   environment.interactiveShellInit = ''
