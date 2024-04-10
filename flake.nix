@@ -31,6 +31,7 @@
     hypridle,
     hyprcursor,
     waybar,
+    guifetch,
     ...
   } @ inputs: let
     system = "x86_64-linux";

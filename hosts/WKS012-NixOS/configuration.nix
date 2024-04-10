@@ -224,6 +224,7 @@
     virtiofsd
     lsd
     libglvnd
+    libGL
     glibc
     flutter
     dart
