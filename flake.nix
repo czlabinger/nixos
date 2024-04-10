@@ -42,6 +42,14 @@
       ];
     };
 
+    nixosConfigurations.matthiasLaptop = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./hosts/matthiasLaptop/configuration.nix
+        inputs.home-manager.nixosModules.default
+      ];
+    };
+
     nixosConfigurations.ISO = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
