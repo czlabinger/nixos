@@ -32,7 +32,7 @@ Neofetch uses ab absolute image path! Make sure you change it!
 ## Hosts
 
 * WKS012-NixOS
-    * My Laptop I mainly use for school stuff.
+    * My Laptop I mainly use for school stuff. Nvidia configured for 3050 Mobile.
 * matthiasLaptop
     * Laptop of [@mkurz-TGM](https://www.github.com/mkurz-TGM). Nearly the same as WKS012-NixOS just some small changes. 
 * ISO
