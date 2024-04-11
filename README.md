@@ -33,6 +33,8 @@ Neofetch uses ab absolute image path! Make sure you change it!
 
 * WKS012-NixOS
     * My Laptop I mainly use for school stuff.
+* matthiasLaptop
+    * Laptop of [@mkurz-TGM](https://www.github.com/mkurz-TGM). Nearly the same as WKS012-NixOS just some small changes. 
 * ISO
     * Used to generate an ISO image with the stuff I need to do basic work.
 * WKS011-NixOS
