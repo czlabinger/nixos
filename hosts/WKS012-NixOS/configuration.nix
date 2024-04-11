@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -97,6 +98,25 @@
     extraPackages = with pkgs; [mesa];
     driSupport32Bit = true;
     extraPackages32 = with pkgs.pkgsi686Linux; [mesa];
+  };
+
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    modesetting.enable = true;
+    powerManagement.finegrained = true;
+    open = true;
+    nvidiaSettings = true;
+
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+
+      intelBusId = "PCI:00:02.0";
+      nvidiaBusId = "PCI:01:00.0";
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -233,9 +253,15 @@
     kdePackages.polkit-kde-agent-1
     gnome-multi-writer
     dconf
+    lshw
   ];
 
   environment.interactiveShellInit = ''
+    export __NV_PRIME_RENDER_OFFLOAD=1
+    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export __VK_LAYER_NV_optimus=NVIDIA_only
+
     alias nvim='neovide $1'
     alias tree='lsd --tree'
     alias ls='lsd $1'
