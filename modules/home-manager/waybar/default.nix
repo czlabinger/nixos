@@ -4,7 +4,7 @@
     package = pkgs.waybar;
     settings = {
       mainBar = {
-        height = 20;
+        height = 50;
         layer = "top";
         modules-left = ["custom/launcher" "cpu" "memory" "hyprland/workspaces"];
         modules-center = ["mpris"];
@@ -143,12 +143,12 @@
 
         "custom/launcher" = {
           format = "󱄅";
-          on-click = "wofi --show drun &";
+          on-click = ".config/hypr/scripts/wofi_helper.sh";
         };
       };
     };
     style = ''
-              * {
+      * {
         /* `otf-font-awesome` is required to be installed for icons */
         font-family: Material Design Icons, JetBrainsMono Nerd Font, Iosevka Nerd Font ;
         font-size: 14px;
