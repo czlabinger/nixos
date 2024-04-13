@@ -255,6 +255,7 @@
     dconf
     lshw
     openblas
+    python311Packages.zlib-ng
   ];
 
   environment.interactiveShellInit = ''
