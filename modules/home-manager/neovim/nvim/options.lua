@@ -28,6 +28,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 vim.api.nvim_create_user_command('Venv',
  function()
     require('swenv.api').pick_venv()
-	vim.cmd('LspRestart')
+	vim.cmd('e')
  end,
  { nargs = 0 })
