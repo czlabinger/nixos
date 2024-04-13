@@ -85,7 +85,7 @@ in {
         p.tree-sitter-rust
       ]))
 
-      swenv-nvim
+      dressing-nvim
       telescope-nvim
       neodev-nvim
       noice-nvim
