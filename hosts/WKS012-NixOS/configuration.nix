@@ -254,7 +254,7 @@
     gnome-multi-writer
     dconf
     lshw
-    python311Packages.numpy
+    openblas
   ];
 
   environment.interactiveShellInit = ''
