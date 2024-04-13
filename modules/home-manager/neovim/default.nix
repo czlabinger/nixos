@@ -1,6 +1,23 @@
 {pkgs, ...}: let
   toLua = str: "lua << EOF\n${str}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+
+  customPlugins = {
+    swenv-nvim = pkgs.vimUtils.buildVimPlugin {
+      name = "swenv.nvim";
+      src = pkgs.fetchgit {
+        url = "https://github.com/AckslD/swenv.nvim";
+        rev = "c11eeaa6f8f05abdcbb0a53d0ac290e3f9fabd2c";
+        sha256 = "1gr39f7q156f13myq8x9r4y175wzn6i27raf9xg4sj9z5r4ppli1";
+      };
+      meta = {
+        homepage = "https://github.com/AckslD/swenv.nvim";
+        maintainers = ["AckslD"];
+      };
+    };
+  };
+
+  allPlugins = pkgs.vimPlugins // customPlugins;
 in {
   programs.neovim = {
     enable = true;
@@ -16,7 +33,7 @@ in {
       wl-clipboard
     ];
 
-    plugins = with pkgs.vimPlugins; [
+    plugins = with allPlugins; [
       {
         plugin = comment-nvim;
         config = toLua "require('Comment').setup()";
@@ -68,6 +85,7 @@ in {
         p.tree-sitter-rust
       ]))
 
+      swenv-nvim
       telescope-nvim
       neodev-nvim
       noice-nvim
@@ -89,6 +107,8 @@ in {
       refactoring-nvim
       mini-nvim
       vim-nix
+
+      swenv-nvim
     ];
 
     extraLuaConfig = ''
