@@ -29,4 +29,5 @@ vim.api.nvim_create_user_command('venv',
  function()
     require('swenv.api').pick_venv()
 	vim.cmd('LspRestart')
- end)
+ end,
+ { nargs = 0 })
