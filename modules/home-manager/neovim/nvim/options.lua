@@ -23,4 +23,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
         vim.cmd("lcd %:p:h")
     end
 })
-   
+
+-- Select venv and restart lsp
+vim.api.nvim_create_user_command('venv',
+ function()
+    require('swenv.api').pick_venv()
+	vim.cmd('LspRestart')
+ end)

@@ -5,8 +5,4 @@ vim.cmd("colorscheme gruvbox")
 require("Comment").setup()
 
 -- venv
-require("swenv").setup({
-	post_set_venv = function()
-		vim.cmd('LspRestart')
-	end,
-})
+require("swenv").setup()
