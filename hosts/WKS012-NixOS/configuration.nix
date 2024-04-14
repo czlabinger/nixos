@@ -261,6 +261,7 @@
     openssl
     ocamlPackages.ssl
     xkeyboard_config
+    vite
   ];
 
   environment.interactiveShellInit = ''
