@@ -255,6 +255,7 @@
     dconf
     lshw
     pkg-config
+    openssl
   ];
 
   environment.interactiveShellInit = ''
