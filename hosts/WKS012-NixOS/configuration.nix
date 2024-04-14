@@ -260,6 +260,7 @@
     pkg-config
     openssl
     ocamlPackages.ssl
+    xkeyboard_config
   ];
 
   environment.interactiveShellInit = ''
