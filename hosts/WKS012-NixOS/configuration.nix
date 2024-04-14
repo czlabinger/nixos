@@ -263,6 +263,7 @@
     xkeyboard_config
     vite
     libsoup
+    webkitgtk
   ];
 
   environment.interactiveShellInit = ''
