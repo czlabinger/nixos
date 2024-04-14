@@ -256,6 +256,7 @@
     lshw
     pkg-config
     openssl
+    ocamlPackages.ssl
   ];
 
   environment.interactiveShellInit = ''
