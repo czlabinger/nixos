@@ -254,6 +254,7 @@
     gnome-multi-writer
     dconf
     lshw
+    pkg-config
   ];
 
   environment.interactiveShellInit = ''
