@@ -9,16 +9,19 @@
   ];
 
   # Bootloader
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+      };
+      grub = {
+        enable = true;
+        efiSupport = true;
+        #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+        device = "nodev";
+      };
     };
-    grub = {
-      enable = true;
-      efiSupport = true;
-      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
-      device = "nodev";
-    };
+    cleanTmpDir = true;
   };
 
   nix.settings.auto-optimise-store = true;
