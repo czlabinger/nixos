@@ -217,8 +217,6 @@
     nodePackages_latest.pyright
     vlc
     spotify
-    cargo
-    rustup
     rust-analyzer
     yarn
     mesa
