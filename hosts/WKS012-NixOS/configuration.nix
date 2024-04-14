@@ -262,6 +262,7 @@
     ocamlPackages.ssl
     xkeyboard_config
     vite
+    libsoup
   ];
 
   environment.interactiveShellInit = ''
