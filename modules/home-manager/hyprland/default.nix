@@ -234,7 +234,7 @@
         "SuperShift, P, exec, playerctl play-pause"
 
         #################### Hyprland ####################
-        "SUPER, grave, hyprexpo:expo, toggle" 
+        "SUPER, grave, hyprexpo:expo, toggle"
         "Super, L, exec, hyprlock &"
         "Super+Shift, left, movewindow, l"
         "Super+Shift, right, movewindow, r"
