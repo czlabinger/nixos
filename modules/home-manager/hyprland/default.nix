@@ -326,6 +326,13 @@
         # Cursor
         "hyprctl setcursor Bibata-Original-Classic 24"
       ];
+
+      plugin = {
+        hyprexpo = {
+          workspace_method = "first 1";
+        };
+      };
+    
     };
   };
 }
