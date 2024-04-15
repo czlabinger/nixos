@@ -21,7 +21,7 @@
         device = "nodev";
       };
     };
-    cleanTmpDir = true;
+    tmp.cleanOnBoot = true;
   };
 
   nix.settings.auto-optimise-store = true;
@@ -62,7 +62,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm = {
+  services.displayManager.sddm = {
     enable = true;
     theme = "${import ../../modules/nixos/sddm/tokyo-night.nix {inherit pkgs;}}";
   };

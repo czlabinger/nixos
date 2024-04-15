@@ -16,6 +16,12 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+
+    ########################### Plugins ################################
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    ];
 
     settings = {
       ######################### General Config #########################
@@ -228,6 +234,7 @@
         "SuperShift, P, exec, playerctl play-pause"
 
         #################### Hyprland ####################
+        "SUPER, grave, hyprexpo:expo, toggle" 
         "Super, L, exec, hyprlock &"
         "Super+Shift, left, movewindow, l"
         "Super+Shift, right, movewindow, r"
