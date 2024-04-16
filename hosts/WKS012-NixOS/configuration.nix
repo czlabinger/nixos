@@ -264,6 +264,7 @@
     vite
     libsoup
     webkitgtk
+    zed-editor
   ];
 
   environment.interactiveShellInit = ''
