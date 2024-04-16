@@ -10,7 +10,7 @@
       };
 
       format = ''
-        $cmd_duration$directory $rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+        $cmd_duration$directory $nix$rust$git_branch$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
         $character
       '';
 
