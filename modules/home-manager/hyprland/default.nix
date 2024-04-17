@@ -303,7 +303,7 @@
         "QT_QPA_PLATFORM, wayland"
         "QT_QPA_PLATFORMTHEME, qt5ct"
         "WLR_NO_HARDWARE_CURSORS, 1"
-        "HYPRCURSOR_THEME,Bibata-Original-Classic"
+        "HYPRCURSOR_THEME,adw-gtk3"
         "HYPRCURSOR_SIZE,24"
       ];
 
