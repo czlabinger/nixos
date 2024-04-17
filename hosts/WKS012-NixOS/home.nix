@@ -17,44 +17,6 @@
 
   home.stateVersion = "23.11"; # Don't edit!
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  home.packages = [
-    # Adds the 'hello' command to your environment. It prints a friendly
-    # "Hello, world!" when run.
-    # pkgs.hello
-
-    # It is sometimes useful to fine-tune packages, for example, by applying
-    # overrides. You can do that directly here, just don't forget the
-    # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # You can also create simple shell scripts directly inside your configuration.
-    (pkgs.writeShellScriptBin "rebuild" ''
-      #!/usr/bin/env bash
-      export NIX_PATH=$NIX_PATH:nixos-config=/home/stoffi05/nixos/hosts/WKS012-NixOS/
-      set -e
-
-      pushd ~/nixos
-      alejandra . >/dev/null
-
-      git diff -U0 *.nix
-
-      echo "NixOS rebuilding"
-
-      sudo nixos-rebuild switch --flake . --upgrade &>~/nixos-switch.log || (cat ~/nixos-switch.log | grep --color error && false)
-
-      current=$(nixos-rebuild list-generations | grep current)
-
-      git commit -am "$current"
-
-      popd
-    '')
-  ];
-
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.text
   home.file = {
     ".jdk".source = pkgs.jdk21;
 

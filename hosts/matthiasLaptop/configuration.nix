@@ -231,6 +231,9 @@
     pv
     kdePackages.polkit-kde-agent-1
     gnome-multi-writer
+    nh
+    nix-output-monitor
+    nvd
   ];
 
   environment.interactiveShellInit = ''
@@ -300,4 +303,8 @@
   services.dbus.packages = with pkgs; [
     xfce.xfconf
   ];
+
+  environment.sessionVariables = {
+    FLAKE = "/home/matthias/nixos";
+  };
 }

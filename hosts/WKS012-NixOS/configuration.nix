@@ -155,7 +155,6 @@
     dunst
     vim
     wget
-    #tree
     vscode
     git
     alejandra
@@ -202,7 +201,6 @@
     jdk21
     maven
     jetbrains.idea-ultimate
-    eclipses.eclipse-java
     wxmaxima
     notion-app-enhanced
     docker
@@ -265,6 +263,9 @@
     libsoup
     webkitgtk
     zed-editor
+    nh
+    nix-output-monitor
+    nvd
   ];
 
   environment.interactiveShellInit = ''
@@ -324,7 +325,6 @@
   # networking.firewall.allowedTCPPorts = [8080 5432];
   # networking.firewall.allowedUDPPorts = [5432];
   # Or disable the firewall altogether.
-  networking.firewall.enable = false;
 
   system.stateVersion = "23.11"; # Don't edit!
 
@@ -339,4 +339,8 @@
   services.dbus.packages = with pkgs; [
     xfce.xfconf
   ];
+
+  environment.sessionVariables = {
+    FLAKE = "/home/stoffi05/nixos";
+  };
 }
