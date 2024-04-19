@@ -11,6 +11,8 @@ in {
       rust-analyzer
       pyright
       nil
+      meson
+      nodePackages_latest.typescript-language-server
 
       xclip
       wl-clipboard
