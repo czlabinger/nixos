@@ -10,6 +10,7 @@
     ../../modules/home-manager/kitty
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
+    ../../modules/home-manager/ags
   ];
 
   home.username = "stoffi05";

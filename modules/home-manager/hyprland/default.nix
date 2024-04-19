@@ -157,7 +157,6 @@
       windowrule = [
         "noblur,.*"
         "float, ^(steam)$"
-        "float, ^(guifetch)$"
 
         # Dialogs
         "float,title:^(Open File)(.*)$"
@@ -166,9 +165,12 @@
         "float,title:^(Open Folder)(.*)$"
         "float,title:^(Save As)(.*)$"
         "float,title:^(Library)(.*)$"
+        "float,^(com.github.Aylur.ags)"
       ];
 
-      windowrulev2 = "tile,class:(wpsoffice)";
+      windowrulev2 = [
+        "tile,class:^(wpsoffice)"
+      ];
 
       layerrule = [
         "noanim, selection"
@@ -182,6 +184,8 @@
         "ignorealpha 0.5, launcher"
         "blur, notifications"
         "ignorealpha 0.69, notifications"
+        "blur, myBar"
+        "ignorealpha 0.6, myBar"
       ];
 
       ######################### Keybinds #########################
@@ -312,7 +316,7 @@
       exec-once = [
         "swww kill; swww init"
         "fcitx5"
-        "waybar &"
+        "ags &"
         "gnome-keyring-daemon --start --components=secrets &"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "hypridle &"
