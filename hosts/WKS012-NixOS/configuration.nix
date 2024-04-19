@@ -267,7 +267,6 @@
     vite
     libsoup
     webkitgtk
-    zed-editor
     nh
     nix-output-monitor
     nvd
