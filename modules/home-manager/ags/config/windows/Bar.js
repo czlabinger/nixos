@@ -1,3 +1,5 @@
+import PowerButton from "./PowerMenu/PowerButton.js";
+
 const hyprland = await Service.import("hyprland")
 const notifications = await Service.import("notifications")
 const mpris = await Service.import("mpris")
@@ -178,11 +180,12 @@ function Right() {
         hpack: "end",
         spacing: 8,
         children: [
-            Volume(),
+			Volume(),
             BatteryLabel(),
             Clock(),
             SysTray(),
-        ],
+        	PowerButton(),
+		],
     })
 }
 
