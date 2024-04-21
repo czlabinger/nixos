@@ -38,3 +38,13 @@ levelbar block,
 highlight {
     min-height: 10px;
 }
+
+.session-button {
+	border-radius: 1.705rem;
+	-gtk-outline-radius: 1.705rem;
+	min-width: 8.182rem;
+	min-height: 8.182rem;
+	background-color: #36343b;
+	color: #c9c4cf;
+	font-size: 3rem; 
+}

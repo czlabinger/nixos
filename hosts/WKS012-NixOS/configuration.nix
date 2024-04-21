@@ -270,6 +270,7 @@
     nh
     nix-output-monitor
     nvd
+    hyprpicker 
   ];
 
   environment.interactiveShellInit = ''
