@@ -143,6 +143,7 @@ export default () => {
             }),
             Widget.Box({
                 hpack: 'center',
+				vpack: 'center',
                 vexpand: true,
                 vertical: true,
                 children: [
