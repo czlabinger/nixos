@@ -48,3 +48,11 @@ highlight {
 	color: #c9c4cf;
 	font-size: 3rem; 
 }
+
+.sysmenu {
+	min-width: 2000rem;
+}
+
+.sysmenu-icon {
+	padding: 100px;
+}

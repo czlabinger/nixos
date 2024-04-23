@@ -1,4 +1,4 @@
-import PowerButton from "./PowerMenu/PowerButton.js";
+import SysMenuButton from "./SysMenu/SysMenuButton.js";
 
 const hyprland = await Service.import("hyprland")
 const notifications = await Service.import("notifications")
@@ -184,7 +184,7 @@ function Right() {
             BatteryLabel(),
             Clock(),
             SysTray(),
-        	PowerButton(),
+        	SysMenuButton(),
 		],
     })
 }
