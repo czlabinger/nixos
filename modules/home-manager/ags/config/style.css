@@ -50,9 +50,26 @@ highlight {
 }
 
 .sysmenu {
-	min-width: 2000rem;
+	border-radius: 999px;
+}
+
+.sysmenu-content {
+	min-width: 30rem;
 }
 
 .sysmenu-icon {
-	padding: 100px;
+	margin-left: 2rem; 
+	margin-top: 1rem;
+	font-size: 5rem;
+	background-color: #6b6775;
+	border-radius: 1rem;
+
+	/* Fix background */
+	padding-top: 0.7rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.systoggles {
+	background-color: #6b6775;
 }

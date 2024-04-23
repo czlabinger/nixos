@@ -3,25 +3,33 @@ import PowerButton from "../PowerMenu/PowerButton.js";
 
 const togglesBox = Widget.Box({
     hpack: 'center',
+	class_name: 'toggles-box',
     children: [
         //ToggleIconWifi(),
         //ToggleIconBluetooth(),
-        PowerButton(),
+
+		PowerButton(),
     ]
 })
 
 export default () => {
 	return Widget.Box({
 		name: 'sysmenu-content',
-		css: 'min-width: 35rem;',
-		vexpand: true,
-		hexpand: true,
+		class_name: 'sysmenu-content',
+		vpack: 'start',
+		vertical: true,
 		children: [
-        	Widget.Icon({
-				name: 'sysmenu-icon',
-				css: '',
-            	icon: getDistroIcon(),
-        	}),
+			Widget.Box({
+				children: [
+					Widget.Icon({
+						hpack: 'center',
+						name: 'sysmenu-icon',
+						class_name: 'sysmenu-icon',
+            			icon: getDistroIcon(),
+        			}),
+				],
+			}),
+
 			togglesBox,
 		],
 	})

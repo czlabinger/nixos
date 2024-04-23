@@ -51,7 +51,7 @@ const SessionButton = (name, icon, command, props = {}, colorid = 0) => {
 export default () => {
     const lockButton = SessionButton(
 		'Lock', 
-		'lock', 
+		'lock-symbolic', 
 		() => { 
 			App.closeWindow('PowerMenu'); 
 			execAsync(['loginctl', 'lock-session']).catch(print) 
@@ -59,7 +59,7 @@ export default () => {
 
     const logoutButton = SessionButton(
 		'Logout', 
-		'logout', 
+		'logout-symbolic', 
 		() => { 
 			App.closeWindow('PowerMenu'); 
 			execAsync(['bash', '-c', 'pkill Hyprland || pkill sway || pkill niri || loginctl terminate-user $USER']).catch(print) 
@@ -67,7 +67,7 @@ export default () => {
 
     const sleepButton = SessionButton(
 		'Sleep', 
-		'sleep', 
+		'sleep-symbolic', 
 		() => { 
 			App.closeWindow('PowerMenu'); 
 			execAsync(['bash', '-c', 'systemctl suspend || loginctl suspend']).catch(print) 
@@ -75,7 +75,7 @@ export default () => {
 
     const hibernateButton = SessionButton(
 		'Hibernate', 
-		'hibernate', 
+		'hibernate-symbolic', 
 		() => { 
 			App.closeWindow('PowerMenu'); 
 			execAsync(['bash', '-c', 'systemctl hibernate || loginctl hibernate']).catch(print) 
@@ -83,7 +83,7 @@ export default () => {
 
     const shutdownButton = SessionButton(
 		'Shutdown', 
-		'power-button', 
+		'power-button-symbolic', 
 		() => { 
 			App.closeWindow('PowerMenu'); 
 			execAsync(['bash', '-c', 'systemctl poweroff || loginctl poweroff']).catch(print) 
@@ -91,7 +91,7 @@ export default () => {
 
     const rebootButton = SessionButton(
 		'Reboot', 
-		'reboot', 
+		'reboot-symbolic', 
 		() => { 
 			App.closeWindow('PowerMenu'); 
 			execAsync(['bash', '-c', 'systemctl reboot || loginctl reboot']).catch(print) 
@@ -99,7 +99,7 @@ export default () => {
 
     const cancelButton = SessionButton(
 		'Cancel', 
-		'close', 
+		'close-symbolic', 
 		() => App.closeWindow('PowerMenu'), 
 		{ className: 'session-button-cancel' }, 7);
 

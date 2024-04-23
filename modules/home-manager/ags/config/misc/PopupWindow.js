@@ -4,7 +4,10 @@ const { Box, Window } = Widget;
 export default ({
     name,
     child,
-    showClassName = "",
+    hpack = "",
+	vpack = "",
+	class_name = '',
+	showClassName = "",
     hideClassName = "",
     ...props
 }) => {
@@ -25,6 +28,9 @@ export default ({
                     self.className = `${showClassName} ${hideClassName}`;
             },
             child: child,
+			hpack: hpack,
+			vpack: vpack,
+			class_name: class_name,
         }),
     });
 }
