@@ -271,6 +271,7 @@
     nix-output-monitor
     nvd
     hyprpicker 
+    inkscape-with-extensions
   ];
 
   environment.interactiveShellInit = ''

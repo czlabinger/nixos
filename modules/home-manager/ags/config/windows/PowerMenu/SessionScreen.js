@@ -1,6 +1,5 @@
-import * as Utils from 'resource:///com/github/Aylur/ags/utils.js';
+import { execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
 
-const { execAsync } = Utils;
 const { Gdk, Gtk } = imports.gi;
 
 const SessionButton = (name, icon, command, props = {}, colorid = 0) => {

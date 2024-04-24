@@ -49,12 +49,19 @@ highlight {
 	font-size: 3rem; 
 }
 
+.session-bg {
+	background-color: @theme_bg_color;
+}
+
 .sysmenu {
-	border-radius: 999px;
+	min-width: 30rem;
+	border-radius: 1rem;
+	background-color: @theme_bg_color;
 }
 
 .sysmenu-content {
 	min-width: 30rem;
+	border-radius: 1rem;
 }
 
 .sysmenu-icon {
@@ -72,4 +79,12 @@ highlight {
 
 .systoggles {
 	background-color: #6b6775;
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+	font-size: 2rem;
 }
+
+.network-indicator .powerButton {
+	margin-bottom: 1rem;
+}
+

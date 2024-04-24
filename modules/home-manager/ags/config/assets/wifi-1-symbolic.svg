@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m12,14.97a3,3 0 1 0 3,3a3,3 0 0 0 -3,-3zm0,4a1,1 0 1 1 1,-1a1,1 0 0 1 -1,1zm0,-8a7.06,7.06 0 0 0 -4.95,2.05a1,1 0 0 0 0,1.41a1,1 0 0 0 1.41,0a5,5 0 0 1 7.08,0a1,1 0 0 0 0.7,0.3a1,1 0 0 0 0.76,-1.71a7.06,7.06 0 0 0 -5,-2.05z" id="svg_1"/>
+ </g>
+</svg>

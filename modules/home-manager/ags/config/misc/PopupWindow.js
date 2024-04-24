@@ -4,8 +4,6 @@ const { Box, Window } = Widget;
 export default ({
     name,
     child,
-    hpack = "",
-	vpack = "",
 	class_name = '',
 	showClassName = "",
     hideClassName = "",
@@ -17,7 +15,9 @@ export default ({
         layer: 'overlay',
         ...props,
 
-        child: Box({
+		class_name: class_name,
+        
+		child: Box({
             setup: (self) => {
                 self.hook(App, (self, currentName, visible) => {
                     if (currentName === name) {
@@ -28,9 +28,6 @@ export default ({
                     self.className = `${showClassName} ${hideClassName}`;
             },
             child: child,
-			hpack: hpack,
-			vpack: vpack,
-			class_name: class_name,
         }),
     });
 }

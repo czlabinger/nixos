@@ -1,11 +1,12 @@
 import { getDistroIcon } from "../../misc/Misc.js";
 import PowerButton from "../PowerMenu/PowerButton.js";
+import WiFiToggle from "./WiFi/WiFiToggle.js";
 
 const togglesBox = Widget.Box({
     hpack: 'center',
 	class_name: 'toggles-box',
     children: [
-        //ToggleIconWifi(),
+        WiFiToggle(),
         //ToggleIconBluetooth(),
 
 		PowerButton(),

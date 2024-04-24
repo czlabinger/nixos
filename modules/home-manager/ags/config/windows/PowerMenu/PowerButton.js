@@ -1,6 +1,6 @@
 export default () => {
 	return Widget.Button({
-        class_name: "powerMenu systoggles",
+        class_name: "powerMenu systoggles powerButton",
     	child: Widget.Icon({
     			icon: 'power-button-symbolic',
 			}),
