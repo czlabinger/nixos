@@ -1,5 +1,6 @@
 import { getDistroIcon } from "../../misc/Misc.js";
 import PowerButton from "../PowerMenu/PowerButton.js";
+import HyprlandButton from "./Hyprland/HyprlandButton.js";
 import WiFiToggle from "./WiFi/WiFiToggle.js";
 
 const togglesBox = Widget.Box({
@@ -8,8 +9,8 @@ const togglesBox = Widget.Box({
     children: [
         WiFiToggle(),
         //ToggleIconBluetooth(),
-
 		PowerButton(),
+		HyprlandButton(),
     ]
 })
 

@@ -11,13 +11,15 @@ export function getDistroIcon() {
 }
 
 export function NetworkIndicator() {
+	
+	App.addIcons(`${App.configDir}/assets/`)
 	return Widget.Stack({
 		transition: 'slide_up_down',
 		class_name: 'network-indicator',
 		children: {
 			'disabled': Widget.Icon({ icon: 'wifi-off-symbolic' }),
-			'disconnected': Widget.Icon({ icon: 'wifi-disconnected-symbolic' }),
-			'connecting': Widget.Icon({ icon: 'wifi-connecting-symbolic' }),
+			'disconnected': Widget.Icon({ icon: 'wifi-disconnected-symbolic', css: 'color: white;' }),
+			'connecting': Widget.Icon({ icon: 'wifi-connecting-symbolic', css: 'color: white;' }),
 			'0': Widget.Icon({ icon: 'wifi-0-symbolic' }),
 			'1': Widget.Icon({ icon: 'wifi-1-symbolic' }),
 			'2': Widget.Icon({ icon: 'wifi-2-symbolic' }),
