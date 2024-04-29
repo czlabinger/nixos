@@ -197,7 +197,7 @@
     nodePackages.typescript
     luajitPackages.lua-lsp
     python3
-    nodejs_21
+    nodejs_22
     nodePackages_latest.bash-language-server
     nodePackages_latest.pyright
     vlc
