@@ -67,10 +67,16 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm = {
+  #services.displayManager.sddm = {
+  #  enable = true;
+  #  wayland.enable = true;
+  #  theme = "${import ../../modules/nixos/sddm/tokyo-night.nix {inherit pkgs;}}";
+  #};
+  services.xserver.displayManager.gdm = {
     enable = true;
-    theme = "${import ../../modules/nixos/sddm/tokyo-night.nix {inherit pkgs;}}";
+    wayland = true;
   };
+  
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
