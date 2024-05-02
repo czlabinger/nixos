@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../../modules/home-manager/hyprland
-    ../../modules/home-manager/waybar/matthias.nix
+    #../../modules/home-manager/waybar/matthias.nix
     ../../modules/home-manager/foot
     ../../modules/home-manager/zsh
     ../../modules/home-manager/starship
@@ -10,6 +10,7 @@
     ../../modules/home-manager/kitty
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
+      ../../modules/home-manager/ags
   ];
 
   home.username = "matthias";
