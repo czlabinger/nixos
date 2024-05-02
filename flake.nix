@@ -28,7 +28,6 @@
     };
     
     ags.url = "github:Aylur/ags";
-
   };
 
   outputs = {
