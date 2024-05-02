@@ -15,8 +15,6 @@
     hyprcursor.url = "github:hyprwm/hyprcursor";
     waybar.url = "github:Alexays/Waybar";
 
-    guifetch.url = "github:flafyDev/guifetch";
-
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,7 +37,6 @@
     hypridle,
     hyprcursor,
     waybar,
-    guifetch,
     ...
   } @ inputs: let
     system = "x86_64-linux";

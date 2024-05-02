@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }: {
   imports = [
@@ -111,26 +110,22 @@
     enable = true;
     extraPackages = with pkgs; [mesa];
     driSupport32Bit = true;
+    driSupport = true;
     extraPackages32 = with pkgs.pkgsi686Linux; [mesa];
   };
 
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia.modesetting.enable = true;
 
-    modesetting.enable = true;
-    powerManagement.finegrained = true;
-    open = true;
-    nvidiaSettings = true;
-
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-
-      intelBusId = "PCI:00:02.0";
-      nvidiaBusId = "PCI:01:00.0";
+  hardware.nvidia.prime = {
+    offload = {
+      enable = true;
+      enableOffloadCmd = true;
     };
+
+    intelBusId = "PCI:0:2:0";
+
+    nvidiaBusId = "PCI:1:0:0";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).

@@ -4,24 +4,45 @@ export default () => {
 	return Widget.Box({
 		name: 'hyprlandExitContent',
 		class_name: 'hyprlandExitContent session-bg',
-		hpack: 'center',
+		vertical: true,
 		css: `
         min-width: 1920px; 
         min-height: 1080px;
         `,
 
-		children: [
-			Widget.Label('You want to exit Hyprland?'),
-			Widget.Button({
-				name: 'hyprlandExitNes',
-				child: Widget.Label('Yes'),
-				on_primary_click: () => execAsync('hyprctl dispatch exit'),
-			}),
-			Widget.Button({
-				name: 'hyprlandExitNo',
-				child: Widget.Label('No'),
-				on_primary_click: () => App.toggleWindow('hyprlandExit'),
-			})
-		],
+		child: Widget.Box({
+			
+			hpack: 'center',
+			vpack: 'center',
+			vexpand: true,
+			vertical: true,
+
+			children: [
+				Widget.Label('You want to exit Hyprland?'),
+
+				Widget.Box({
+					
+                    vpack: 'center',
+                    vertical: true,
+					hpack: 'center',
+
+					children: [
+						Widget.Button({
+							name: 'hyprlandExitNes',
+							class_name: 'session-button',
+							child: Widget.Label('Yes'),
+							on_primary_click: () => execAsync('hyprctl dispatch exit'),
+						}),
+				
+						Widget.Button({
+							name: 'hyprlandExitNo',
+							class_name: 'session-button',
+							child: Widget.Label('No'),
+							on_primary_click: () => App.toggleWindow('hyprlandExit'),
+						}),
+					],
+				}),
+			],
+		})
 	})
 }

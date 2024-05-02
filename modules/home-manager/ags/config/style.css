@@ -1,5 +1,5 @@
 window.bar {
-    background-color: @theme_bg_color;
+	background-color: rgba(0,0,0,0.5);	
     color: @theme_fg_color;
 }
 
@@ -87,4 +87,3 @@ highlight {
 .network-indicator .powerButton {
 	margin-bottom: 1rem;
 }
-
