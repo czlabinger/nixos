@@ -19,6 +19,8 @@
 
   home.file = {
     ".jdk".source = pkgs.jdk21;
+    
+    ".python".source = pkgs.python3;
 
     ".config/hypr/scripts/wofi_helper.sh" = {
       text = ''

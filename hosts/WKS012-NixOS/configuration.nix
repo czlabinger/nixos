@@ -272,6 +272,8 @@
     nvd
     hyprpicker 
     inkscape-with-extensions
+    libz
+    glibc
   ];
 
   environment.interactiveShellInit = ''
