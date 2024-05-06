@@ -7,6 +7,7 @@
 
     configDir = ./config;
 
+
     extraPackages = with pkgs; [
       gtksourceview
       webkitgtk

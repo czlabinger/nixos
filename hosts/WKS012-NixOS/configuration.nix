@@ -332,10 +332,10 @@
   #};
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [8080 5432];
-  networking.firewall.allowedUDPPorts = [5432];
+  # networking.firewall.allowedTCPPorts = [8080 5432];
+  # networking.firewall.allowedUDPPorts = [5432];
   # Or disable the firewall altogether.
-  networking.firewall.enable = false;
+  # networking.firewall.enable = false;
 
   system.stateVersion = "23.11"; # Don't edit!
 
