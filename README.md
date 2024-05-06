@@ -50,4 +50,3 @@ sudo nixos-rebuild --flake .#WKS012-NixOS switch
 
 ## Thanks to
 - [vimjoyer](https://www.youtube.com/@vimjoyer) for their videos
-- [nomadics9](https://github.com/nomadics9/NixOS-Flake) for their waybar config

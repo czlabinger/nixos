@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ../../modules/home-manager/hyprland
-    ../../modules/home-manager/waybar
     ../../modules/home-manager/foot
     ../../modules/home-manager/zsh
     ../../modules/home-manager/starship
