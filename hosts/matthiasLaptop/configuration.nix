@@ -245,6 +245,7 @@
     nh
     nix-output-monitor
     nvd
+    tesseract4
   ];
 
   environment.interactiveShellInit = ''

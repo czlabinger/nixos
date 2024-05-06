@@ -18,12 +18,11 @@ export default () => {
 			vertical: true,
 
 			children: [
-				Widget.Label('You want to exit Hyprland?'),
+				Widget.Label('Do you want to exit Hyprland?'),
 
 				Widget.Box({
 					
                     vpack: 'center',
-                    vertical: true,
 					hpack: 'center',
 
 					children: [

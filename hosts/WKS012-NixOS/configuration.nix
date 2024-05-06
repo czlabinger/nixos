@@ -275,6 +275,7 @@
     inkscape-with-extensions
     libz
     glibc
+    tesseract4
   ];
 
   environment.interactiveShellInit = ''

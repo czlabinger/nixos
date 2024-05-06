@@ -20,7 +20,7 @@
 
     ########################### Plugins ################################
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+      #inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
     ];
 
     settings = {
@@ -233,12 +233,16 @@
 
         #################### Screenshot ####################
         "SuperShift, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+        "SuperAltShift, S, exec,grim -g \"$(slurp -d -c D1E5F4BB -b 1B232866 -s 00000000)\" \"tmp.png\" && tesseract -l eng \"tmp.png\" - | wl-copy && rm \"tmp.png\" "
+          
+
+        #################### Playerctl #####################
         "SuperShift, N, exec, playerctl next || playerctl position `bc <<< \"100 * $(playerctl metadata mpris:length) / 1000000 / 100\"`"
         "SuperShift, B, exec, playerctl previous"
         "SuperShift, P, exec, playerctl play-pause"
 
         #################### Hyprland ####################
-        "SUPER, grave, hyprexpo:expo, toggle"
+        #"SUPER, grave, hyprexpo:expo, toggle"
         "Super, L, exec, hyprlock &"
         "Super+Shift, left, movewindow, l"
         "Super+Shift, right, movewindow, r"
