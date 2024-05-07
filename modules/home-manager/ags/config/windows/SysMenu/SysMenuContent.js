@@ -18,7 +18,7 @@ const togglesBox = Widget.Box({
 const brigtnessSlider = Widget.Box({
 	hpack: 'center',
 	class_name: 'brightness-slider',
-	css: "min-width: 15rem",
+	css: "min-width: 20rem",
 	children: [
 		Widget.Label("Brightness: "),
 		Widget.Slider({
