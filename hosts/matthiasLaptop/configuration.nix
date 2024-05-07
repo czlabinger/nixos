@@ -247,6 +247,7 @@
     nvd
     tesseract4
     zoxide
+    brightnessctl
   ];
 
   environment.interactiveShellInit = ''
