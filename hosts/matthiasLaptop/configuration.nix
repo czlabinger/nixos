@@ -246,12 +246,14 @@
     nix-output-monitor
     nvd
     tesseract4
+    zoxide
   ];
 
   environment.interactiveShellInit = ''
     alias nvim='neovide $1'
     alias tree='lsd --tree'
     alias ls='lsd $1'
+    alias cd='z $1'
   '';
 
   programs.java = {
