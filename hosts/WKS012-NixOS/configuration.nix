@@ -306,13 +306,17 @@
     "openjdk21".source = jdk21;
   };
 
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
+  virtualisation = {
+    docker = {
       enable = true;
-      setSocketVariable = true;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
     };
+    virtualbox.host.enable = true;
   };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

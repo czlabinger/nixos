@@ -87,3 +87,7 @@ highlight {
 .network-indicator .powerButton {
 	margin-bottom: 1rem;
 }
+
+.charging {
+	color: #FFFF00;
+}
