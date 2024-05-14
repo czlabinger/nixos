@@ -10,8 +10,20 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    hyprlock.url = "github:hyprwm/hyprlock";
-    hypridle.url = "github:hyprwm/hypridle";
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
+
+    hypridle = {
+      url = "github:hyprwm/hypridle"; 
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
+
     hyprcursor.url = "github:hyprwm/hyprcursor";
 
     firefox-addons = {
