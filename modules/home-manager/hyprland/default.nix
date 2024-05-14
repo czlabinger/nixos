@@ -7,7 +7,10 @@
     ./hyprlock.nix
     ./hypridle.nix
     inputs.hyprland.homeManagerModules.default
+    inputs.hyprlock.homeManagerModules.default
   ];
+
+  disabledModules = ["programs/hyprlock.nix"];
 
   home.packages = with pkgs; [
     waybar

@@ -1,7 +1,4 @@
-{inputs, ...}: {
-  imports = [
-    inputs.hyprlock.homeManagerModules.default
-  ];
+{...}: {
 
   programs.hyprlock = {
     general = {
