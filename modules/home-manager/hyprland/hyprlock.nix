@@ -4,8 +4,6 @@
   ];
 
   programs.hyprlock = {
-    enable = true;
-
     general = {
       disable_loading_bar = false;
       hide_cursor = true;
