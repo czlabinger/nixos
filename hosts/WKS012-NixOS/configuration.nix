@@ -5,45 +5,17 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./../../modules/nixos/boot
+    ./../../modules/nixos/nix
   ];
 
-  # Bootloader
-  boot = {
-    loader = {
-      efi = {
-        canTouchEfiVariables = true;
-      };
-      grub = {
-        enable = true;
-        efiSupport = true;
-        #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
-        device = "nodev";
-      };
-    };
-    tmp.cleanOnBoot = true;
-  };
-
-  nix.settings.auto-optimise-store = true;
-
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
-
-  # Delete older than 7d
-  nix.gc.automatic = true;
-  nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than 7d";
+  security.pam.services.hyprlock.text = "auth include login";
 
   networking.hostName = "WKS012-NixOS";
-  #networking.wireless.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Enable flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
+  
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 
@@ -65,12 +37,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  #services.displayManager.sddm = {
-  #  enable = true;
-  #  wayland.enable = true;
-  #  theme = "${import ../../modules/nixos/sddm/tokyo-night.nix {inherit pkgs;}}";
-  #};
   services.xserver.displayManager.gdm = {
     enable = true;
     wayland = true;
@@ -154,8 +120,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     wireplumber
     dunst

@@ -13,7 +13,6 @@
     hyprlock.url = "github:hyprwm/hyprlock";
     hypridle.url = "github:hyprwm/hypridle";
     hyprcursor.url = "github:hyprwm/hyprcursor";
-    waybar.url = "github:Alexays/Waybar";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
@@ -36,7 +35,6 @@
     hyprlock,
     hypridle,
     hyprcursor,
-    waybar,
     ...
   } @ inputs: let
     system = "x86_64-linux";
