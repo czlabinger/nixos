@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.file = {
     ".config/neofetch/nixos.png".source = ./nixos.png;
 

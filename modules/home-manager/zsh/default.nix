@@ -13,7 +13,7 @@
       plugins = ["git" "sudo" "colored-man-pages"];
       theme = "agnoster";
       extraConfig = ''
-          eval "$(zoxide init zsh)"
+        eval "$(zoxide init zsh)"
       '';
     };
   };

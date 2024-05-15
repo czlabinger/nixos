@@ -2,10 +2,9 @@
   description = "Nixos config flake";
 
   inputs = {
-
     ################# General ###################
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +12,7 @@
 
     ags.url = "github:Aylur/ags";
 
-     firefox-addons = {
+    firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -34,13 +33,13 @@
     };
 
     hypridle = {
-      url = "github:hyprwm/hypridle"; 
+      url = "github:hyprwm/hypridle";
       inputs.hyprlang.follows = "hyprland/hyprlang";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
       inputs.systems.follows = "hyprland/systems";
     };
 
-    hyprcursor.url = "github:hyprwm/hyprcursor"; 
+    hyprcursor.url = "github:hyprwm/hyprcursor";
   };
 
   outputs = {

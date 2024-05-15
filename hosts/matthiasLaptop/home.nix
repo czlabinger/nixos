@@ -9,7 +9,7 @@
     ../../modules/home-manager/kitty
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
-      ../../modules/home-manager/ags
+    ../../modules/home-manager/ags
   ];
 
   home.username = "matthias";
@@ -19,7 +19,7 @@
 
   home.file = {
     ".jdk".source = pkgs.jdk21;
-    
+
     ".python".source = pkgs.python3;
 
     ".config/hypr/scripts/wofi_helper.sh" = {

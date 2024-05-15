@@ -8,7 +8,7 @@
     ./../../modules/nixos/boot
     ./../../modules/nixos/nix
   ];
-  
+
   security.pam.services.hyprlock.text = "auth include login";
 
   networking.hostName = "matthiasLaptop";
@@ -48,7 +48,7 @@
     enable = true;
     wayland = true;
   };
- 
+
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11

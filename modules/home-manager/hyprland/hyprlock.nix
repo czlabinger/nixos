@@ -1,5 +1,4 @@
 {...}: {
-
   programs.hyprlock = {
     general = {
       disable_loading_bar = false;
