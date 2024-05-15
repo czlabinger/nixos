@@ -224,6 +224,7 @@
     tesseract4
     zoxide
     brightnessctl
+    imagemagick
   ];
 
   environment.interactiveShellInit = ''

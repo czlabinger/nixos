@@ -4,6 +4,7 @@
       efi = {
         canTouchEfiVariables = true;
       };
+      
       grub = {
         enable = true;
         efiSupport = true;
@@ -11,6 +12,7 @@
         device = "nodev";
       };
     };
+    
     tmp.cleanOnBoot = true;
   };
 }

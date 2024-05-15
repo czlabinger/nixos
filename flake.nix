@@ -2,7 +2,23 @@
   description = "Nixos config flake";
 
   inputs = {
+
+    ################# General ###################
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ags.url = "github:Aylur/ags";
+
+     firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ################### Hypr ########################
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     hyprland-plugins = {
@@ -24,29 +40,13 @@
       inputs.systems.follows = "hyprland/systems";
     };
 
-    hyprcursor.url = "github:hyprwm/hyprcursor";
-
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
-    ags.url = "github:Aylur/ags";
+    hyprcursor.url = "github:hyprwm/hyprcursor"; 
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    hyprland,
-    hyprlock,
-    hypridle,
-    hyprcursor,
     ...
   } @ inputs: let
     system = "x86_64-linux";
