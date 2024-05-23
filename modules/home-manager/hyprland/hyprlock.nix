@@ -1,5 +1,7 @@
 {...}: {
   programs.hyprlock = {
+    enable = true;
+
     general = {
       disable_loading_bar = false;
       hide_cursor = true;
@@ -8,8 +10,8 @@
     backgrounds = [
       {
         #Broken again
-        path = "screenshot";
-        #path = "/home/stoffi05/Pictures/lucy.png";
+        #path = "screenshot";
+        path = /home/stoffi05/Pictures/lucy.jpg;
         blur_passes = 4;
         blur_size = 4;
         contrast = 1.2;

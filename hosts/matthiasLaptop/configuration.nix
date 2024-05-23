@@ -288,7 +288,8 @@
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-
+  programs.hyprlock.package = inputs.hyprlock.packages."${pkgs.system}".hyprlock;
+  
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
