@@ -225,6 +225,7 @@
     zoxide
     brightnessctl
     imagemagick
+    vmware-workstation
   ];
 
   environment.interactiveShellInit = ''

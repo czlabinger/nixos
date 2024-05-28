@@ -246,6 +246,7 @@
     foliate
     fceux
     zip
+    vmware-workstation
   ];
 
   environment.interactiveShellInit = ''
@@ -285,7 +286,6 @@
         setSocketVariable = true;
       };
     };
-    virtualbox.host.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
