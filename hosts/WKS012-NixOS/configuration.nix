@@ -185,7 +185,6 @@
     python3
     nodejs_22
     nodePackages_latest.bash-language-server
-    nodePackages_latest.pyright
     vlc
     spotify
     cargo
@@ -246,7 +245,9 @@
     foliate
     fceux
     zip
-    vmware-workstation
+    jetbrains.pycharm-professional
+    vimPlugins.flutter-tools-nvim
+    warp-terminal
   ];
 
   environment.interactiveShellInit = ''
@@ -300,10 +301,6 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  #networking.firewall = {
-  #  enable = false;
-  #};
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [8080 5432];

@@ -37,7 +37,7 @@ in {
       }
       {
         plugin = todo-comments-nvim;
-        config = toLua "require('nvim-autopairs').setup()";
+        config = toLua "require('todo-comments').setup()";
       }
       {
         plugin = neogit;
@@ -59,6 +59,12 @@ in {
         plugin = presence-nvim;
         config = toLua "require('presence').setup({})";
       }
+      
+      {
+        plugin = flutter-tools-nvim;
+        config = toLua "require('flutter-tools').setup{}";
+      }
+      
       (nvim-treesitter.withPlugins (p: [
         p.tree-sitter-nix
         p.tree-sitter-vim

@@ -181,7 +181,6 @@
     python3
     nodejs_22
     nodePackages_latest.bash-language-server
-    nodePackages_latest.pyright
     vlc
     spotify
     cargo
@@ -226,6 +225,7 @@
     brightnessctl
     imagemagick
     vmware-workstation
+    warp-terminal
   ];
 
   environment.interactiveShellInit = ''
