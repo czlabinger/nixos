@@ -145,7 +145,7 @@
         animate_manual_resizes = false;
         animate_mouse_windowdragging = false;
         enable_swallow = false;
-        swallow_regex = "(foot|kitty|allacritty|Alacritty)";
+        swallow_regex = "(foot|kitty|allacritty|Alacritty|warp|Warp|warp-terminal)";
 
         force_default_wallpaper = 0;
         new_window_takes_over_fullscreen = 2;
@@ -212,8 +212,8 @@
         "Super, Super_L, exec, ~/.config/hypr/scripts/wofi_helper.sh"
         "Super, C, exec, code --password-store=gnome --enable-features=UseOzonePlatform --ozone-platform=wayland"
         "SuperShift, B, exec, baobab / &"
-        "Super, T, exec, kitty"
-        "SuperShiftAlt, T, exec, kitty sleep 0.01 && nmtui"
+        "Super, T, exec, warp-terminal"
+        "SuperShiftAlt, T, exec, warp-terminal sleep 0.01 && nmtui"
         "Super, Return, exec, foot"
         "Super, E, exec, thunar"
         "Super, W, exec, firefox"
@@ -223,7 +223,7 @@
         "Super, I, exec, XDG_CURRENT_DESKTOP='gnome' gnome-control-center"
         "ControlSuper, V, exec, pavucontrol 4"
         "ControlShift, Escape, exec, gnome-system-monitor"
-        "ControlAltShift, Escape, exec, kitty -T 'btop' btop"
+        "ControlAltShift, Escape, exec, warp-terminal -T 'btop' btop"
         "Super, Q, killactive,"
         "SuperAlt, Space, togglefloating, "
         "ShiftSuperAlt, Q, exec, hyprctl kill"

@@ -3,6 +3,7 @@ import PowerButton from "../PowerMenu/PowerButton.js";
 import HyprlandButton from "./Hyprland/HyprlandButton.js";
 import WiFiToggle from "./WiFi/WiFiToggle.js";
 import BrigtnessService from "../../services/BrightnessService.js"
+import SettingsButton from "./Settings/SettingsButton.js";
 
 
 const togglesBox = Widget.Box({
@@ -10,6 +11,7 @@ const togglesBox = Widget.Box({
 	class_name: 'toggles-box',
     children: [
         WiFiToggle(),
+		SettingsButton(),
 		PowerButton(),
 		HyprlandButton(),
     ]
