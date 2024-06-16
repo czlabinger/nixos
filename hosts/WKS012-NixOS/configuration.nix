@@ -248,6 +248,7 @@
     jetbrains.pycharm-professional
     vimPlugins.flutter-tools-nvim
     warp-terminal
+    steam
   ];
 
   environment.interactiveShellInit = ''
@@ -256,7 +257,7 @@
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
     export __VK_LAYER_NV_optimus=NVIDIA_only
 
-    alias nvim='neovide $1'
+    alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
     alias cd='z $1'
@@ -287,6 +288,7 @@
         setSocketVariable = true;
       };
     };
+    virtualbox.host.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -305,7 +307,7 @@
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [8080 5432];
   # networking.firewall.allowedUDPPorts = [5432];
-   networking.firewall.enable = false;
+  # networking.firewall.enable = false;
 
   system.stateVersion = "23.11"; # Don't edit!
 

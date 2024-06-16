@@ -40,6 +40,11 @@
     };
 
     hyprcursor.url = "github:hyprwm/hyprcursor";
+
+    xdg-desktop-portal-hyprland = {
+      url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    };
+
   };
 
   outputs = {
