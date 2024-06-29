@@ -76,7 +76,6 @@
     enable = true;
     extraPackages = with pkgs; [mesa];
     driSupport32Bit = true;
-    driSupport = true;
     extraPackages32 = with pkgs.pkgsi686Linux; [mesa];
   };
 
