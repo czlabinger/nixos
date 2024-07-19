@@ -55,8 +55,9 @@
 
   hardware.bluetooth.enable = true;
 
+
+
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -102,9 +103,6 @@
     description = "Stoffi05";
     shell = pkgs.zsh;
     extraGroups = ["networkmanager" "wheel" "video" "docker" "libvirtd"];
-    packages = with pkgs; [
-      firefox
-    ];
   };
 
   users.extraGroups.docker.members = ["username-with-access-to-socket"];
@@ -120,133 +118,203 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    wireplumber
-    dunst
-    vim
-    wget
-    vscode
-    git
-    alejandra
-    libnotify
-    webcord
-    light
-    foot
-    kitty
-    xfce.thunar
-    gnome-text-editor
-    wpsoffice
-    gnome.gnome-control-center
+  
+    # Audio
+    pulseaudio
     pavucontrol
-    gnome.gnome-system-monitor
-    btop
-    wlogout
-    grim
-    slurp
-    wl-clipboard
     playerctl
-    ydotool
-    swww
-    fcitx5
-    gnome.gnome-keyring
-    polkit
-    polkit_gnome
-    hypridle
-    dbus
-    hyprlock
-    wofi
-    busybox
-    networkmanagerapplet
+    wireplumber
+
+    # Bluetooth
     bluez
     blueberry
-    pulseaudio
-    zsh
-    oh-my-zsh
-    starship
-    gnome2.gtkglext
-    coreutils
-    nwg-look
+
+    # Browsers
+    firefox
+    google-chrome
+
+    # Clipboard
+    wl-clipboard
+ 
+    # Communication
+    webcord
+    whatsapp-for-linux
+
+    # Cursors & Icons
+    bibata-cursors
     beauty-line-icon-theme
-    baobab
+    qogir-icon-theme
+    nixos-icons
+
+    # Development
+    arduino
+    arduino-ide
+    alejandra
+    cargo
+    dart
+    docker
+    flutter
+    git
     jdk21
     maven
-    jetbrains.idea-ultimate
-    wxmaxima
-    notion-app-enhanced
-    docker
-    insomnia
-    neofetch
-    hollywood
-    whatsapp-for-linux
-    neovim
-    neovide
     nodePackages.typescript
-    luajitPackages.lua-lsp
-    python3
     nodejs_22
-    vlc
-    spotify
-    cargo
-    rustup
-    rust-analyzer
-    yarn
-    mesa
-    mupdf
-    light
-    nil
-    gimp
-    bibata-cursors
-    adw-gtk3
-    qogir-icon-theme
-    virt-manager
-    google-chrome
-    discord
-    glxinfo
-    python311Packages.pip
-    arduino-ide
-    arduino
-    nixos-icons
     nix-prefetch-git
+    ocamlPackages.ssl
+    python311Packages.pip
+    python311
+    python311Packages.pip
+    rust-analyzer
+    rustup
+    vim
+    vimPlugins.flutter-tools-nvim
+    vscode
+
+    # Editors
+    gnome-text-editor
+    neovide
+    neovim
+
+    # File Managers
+    xfce.thunar
+
+    # Font Managers
+    font-manager
+
+    # Graphics
+    gimp
+    glxinfo
+    inkscape-with-extensions
+    mupdf
+    imagemagick
+
+    # GTK
+    adw-gtk3
+    libsForQt5.ark
     libsForQt5.qt5.qtgraphicaleffects
-    appimage-run
+    nwg-look
+
+    # Hardware
+    brightnessctl
+    light
+    lshw
+
+    # Hyprland
+    hypridle
+    hyprlock
+    hyprpicker
+    wlogout
+
+    # Keyboards
+    fcitx5
+    xkeyboard_config
+
+    # Libraries
+    libGL
+    libglvnd
+    libnotify
+    libz
+
+    # Miscellaneous
+    fzf
+    gnome-multi-writer
+    grim
+    hollywood
+    notion-app-enhanced
+    spotify
+    vlc
+    wxmaxima
+    ydotool
+    zip
+    zoxide
+    cbonsai
+
+    # Network
+    busybox
+    dbus
+    networkmanagerapplet
+    openssl
+
+    # Nix
+    nh
+    nil
+    nix-output-monitor
+    nix-prefetch-git
+    nvd
+
+    # Notification
+    dunst
+
+    # Productivity
+    foliate
+    wpsoffice
+
+    # Programming Tools
+    arduino
+    arduino-ide
+    dart
+    flutter
+    insomnia
+    jdk21
+    maven
+    nodePackages.typescript
+    nodejs_22
+    ocamlPackages.ssl
+    rust-analyzer
+    rustup
+    jetbrains.idea-ultimate
+    jetbrains.pycharm-professional
+    yarn
+
+    # Shells
+    oh-my-zsh
+    starship
+    zsh
+
+    # System Tools
+    btop
+    coreutils
+    dconf
+    lsd
+    neofetch
+    pkg-config
+    pv
+    virt-manager
     virtio-win
     virtiofsd
-    lsd
-    libglvnd
-    libGL
-    glibc
-    flutter
-    dart
-    libsForQt5.ark
-    pv
-    kdePackages.polkit-kde-agent-1
-    gnome-multi-writer
-    dconf
-    lshw
-    pkg-config
-    openssl
-    ocamlPackages.ssl
-    xkeyboard_config
-    vite
-    libsoup
-    webkitgtk
-    nh
-    nix-output-monitor
-    nvd
-    hyprpicker
-    inkscape-with-extensions
-    libz
-    glibc
-    tesseract4
-    zoxide
-    brightnessctl
-    imagemagick
-    foliate
-    fceux
-    zip
-    jetbrains.pycharm-professional
-    vimPlugins.flutter-tools-nvim
+
+    # Terminal Emulators
+    foot
+    kitty
     warp-terminal
+
+    # Text Editors
+    gnome-text-editor
+    vim
+    vimPlugins.flutter-tools-nvim
+    neovide
+    neovim
+
+    # Utilities
+    appimage-run
+    baobab
+    busybox
+    coreutils
+    dconf
+    fceux
+    foliate
+    glibc
+    hollywood
+    imagemagick
+    lsd
+    neofetch
+    pkg-config
+    pv
     steam
+    tesseract4
+    virt-manager
+    virtio-win
+    virtiofsd
   ];
 
   environment.interactiveShellInit = ''

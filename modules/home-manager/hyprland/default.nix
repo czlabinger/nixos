@@ -28,7 +28,7 @@
       # MONITOR CONFIG
       monitor = [
         ",preferred,auto,1"
-        ",addreserved, 0, 0, 0, 0"
+        ",preferred,auto,1"
       ];
 
       input = {
