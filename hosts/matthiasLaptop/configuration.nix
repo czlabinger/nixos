@@ -167,7 +167,6 @@
     jetbrains.idea-ultimate
     eclipses.eclipse-java
     wxmaxima
-    notion-app-enhanced
     docker
     insomnia
     neofetch

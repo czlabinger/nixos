@@ -1,89 +1,37 @@
-window.bar {
-	background-color: rgba(0,0,0,0.5);	
-    color: @theme_fg_color;
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 15px;
+  font-weight: normal;
+  color: #D3C6AA;
+  background: #343F44;
+  min-height: 26px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-button {
-    min-width: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: transparent;
+.widget {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.widget * {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
-button:active {
-    background-color: @theme_selected_bg_color;
+.clock {
+  font-weight: bold;
 }
 
-button:hover {
-    border-bottom: 3px solid @theme_fg_color;
+.workspace-button-active, .workspace-button-active * {
+  background: #475258;
 }
 
-label {
-    font-weight: bold;
+.workspace-button, .workspace-button * {
+  min-width: 12px;
 }
 
-.workspaces button.focused {
-    border-bottom: 3px solid @theme_selected_bg_color;
-}
-
-.client-title {
-    color: @theme_selected_bg_color;
-}
-
-.notification {
-    color: yellow;
-}
-
-levelbar block,
-highlight {
-    min-height: 10px;
-}
-
-.session-button {
-	border-radius: 1.705rem;
-	-gtk-outline-radius: 1.705rem;
-	min-width: 8.182rem;
-	min-height: 8.182rem;
-	background-color: #36343b;
-	color: #c9c4cf;
-	font-size: 3rem; 
-}
-
-.session-bg {
-	background-color: @theme_bg_color;
-}
-
-.sysmenu {
-	min-width: 30rem;
-	border-radius: 1rem;
-	background-color: @theme_bg_color;
-}
-
-.sysmenu-content {
-	min-width: 30rem;
-	border-radius: 1rem;
-}
-
-.sysmenu-icon {
-	margin-left: 2rem; 
-	margin-top: 1rem;
-	font-size: 5rem;
-	background-color: #6b6775;
-	border-radius: 1rem;
-
-	/* Fix background */
-	padding-top: 0.7rem;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-}
-
-.systoggles {
-	background-color: #6b6775;
-	margin-left: 2rem;
-	margin-bottom: 1rem;
-	font-size: 2rem;
-}
-
-.network-indicator .powerButton {
-	margin-bottom: 1rem;
+separator {
+  /*background: #475258;*/
+  background: #343F44;
+  min-width: 3px;
 }

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   imports = [
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/foot
@@ -9,7 +9,8 @@
     ../../modules/home-manager/kitty
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
-    ../../modules/home-manager/ags
+    #../../modules/home-manager/ags
+    #../../modules/home-manager/waybar
   ];
 
   home.username = "stoffi05";
@@ -39,6 +40,13 @@
     };
   };
 
+  nixpkgs = {
+    # You can add overlays here
+    overlays = [
+      inputs.hyprpanel.overlay.x86_64-linux
+    ];  
+  };
+    
   gtk = {
     enable = true;
     cursorTheme.package = pkgs.bibata-cursors;

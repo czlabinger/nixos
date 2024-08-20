@@ -147,7 +147,7 @@
         enable_swallow = false;
         swallow_regex = "(foot|kitty|allacritty|Alacritty|warp|Warp|warp-terminal)";
 
-        force_default_wallpaper = 0;
+        force_default_wallpaper = 2;
         new_window_takes_over_fullscreen = 2;
       };
 
@@ -320,7 +320,9 @@
       exec-once = [
         "swww kill; swww init"
         "fcitx5"
-        "ags &"
+        #"ags &"
+        #"waybar &"
+        "${pkgs.hyprpanel}/bin/hyprpanel"
         "gnome-keyring-daemon --start --components=secrets &"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "hypridle &"

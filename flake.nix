@@ -12,6 +12,8 @@
 
     ags.url = "github:Aylur/ags";
 
+    waybar.url = "github:Alexays/Waybar";
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,16 +47,20 @@
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
     };
 
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    hyprpanel,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+
   in {
     nixosConfigurations.WKS012-NixOS = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};

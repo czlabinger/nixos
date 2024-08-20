@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./../../modules/nixos/boot
     ./../../modules/nixos/nix
+    ./../../modules/nixos/overlays
   ];
 
   security.pam.services.hyprlock.text = "auth include login";
@@ -102,7 +103,7 @@
     isNormalUser = true;
     description = "Stoffi05";
     shell = pkgs.zsh;
-    extraGroups = ["networkmanager" "wheel" "video" "docker" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "video" "docker" "libvirtd" "input"];
   };
 
   users.extraGroups.docker.members = ["username-with-access-to-socket"];
@@ -205,11 +206,14 @@
     hyprpicker
     wlogout
 
+    hyprpanel
+
     # Keyboards
     fcitx5
     xkeyboard_config
 
     # Libraries
+    glibc
     libGL
     libglvnd
     libnotify
@@ -220,7 +224,6 @@
     gnome-multi-writer
     grim
     hollywood
-    notion-app-enhanced
     spotify
     vlc
     wxmaxima

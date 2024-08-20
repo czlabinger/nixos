@@ -10,6 +10,7 @@
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
     ../../modules/home-manager/ags
+    #../../modules/home-manager/waybar
   ];
 
   home.username = "matthias";
