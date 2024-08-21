@@ -39,13 +39,6 @@
       executable = true;
     };
   };
-
-  nixpkgs = {
-    # You can add overlays here
-    overlays = [
-      inputs.hyprpanel.overlay.x86_64-linux
-    ];  
-  };
     
   gtk = {
     enable = true;

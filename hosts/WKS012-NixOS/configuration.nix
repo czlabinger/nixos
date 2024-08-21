@@ -7,7 +7,6 @@
     ./hardware-configuration.nix
     ./../../modules/nixos/boot
     ./../../modules/nixos/nix
-    ./../../modules/nixos/overlays
   ];
 
   security.pam.services.hyprlock.text = "auth include login";
@@ -165,6 +164,7 @@
     python311Packages.pip
     python311
     python311Packages.pip
+    python311Packages.gpustat
     rust-analyzer
     rustup
     vim

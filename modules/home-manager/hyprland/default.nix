@@ -322,7 +322,7 @@
         "fcitx5"
         #"ags &"
         #"waybar &"
-        "${pkgs.hyprpanel}/bin/hyprpanel"
+        "hyprpanel"
         "gnome-keyring-daemon --start --components=secrets &"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "hypridle &"

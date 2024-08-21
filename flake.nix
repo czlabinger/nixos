@@ -47,15 +47,15 @@
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
     };
 
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    hyprpanel,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -65,6 +65,7 @@
     nixosConfigurations.WKS012-NixOS = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
+        (import ./modules/nixos/overlays)
         ./hosts/WKS012-NixOS/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
