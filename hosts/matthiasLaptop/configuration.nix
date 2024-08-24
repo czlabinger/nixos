@@ -78,7 +78,7 @@
     #media-session.enable = true;
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [mesa];
     driSupport32Bit = true;
