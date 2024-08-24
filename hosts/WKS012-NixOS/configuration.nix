@@ -76,7 +76,7 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [mesa];
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages32 = with pkgs.pkgsi686Linux; [mesa];
   };
 
