@@ -74,6 +74,7 @@
     nixosConfigurations.matthiasLaptop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
+        (import ./modules/nixos/overlays)
         ./hosts/matthiasLaptop/configuration.nix
         inputs.home-manager.nixosModules.default
       ];

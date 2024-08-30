@@ -81,17 +81,20 @@
   };
 
   services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia.modesetting.enable = true;
 
-  hardware.nvidia.prime = {
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
+  hardware.nvidia = {
+    open = true;
+    modesetting.enable = true;
+    
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      intelBusId = "PCI:0:2:0";
+
+      nvidiaBusId = "PCI:1:0:0";
     };
-
-    intelBusId = "PCI:0:2:0";
-
-    nvidiaBusId = "PCI:1:0:0";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -137,6 +140,7 @@
     wl-clipboard
  
     # Communication
+    discord
     webcord
     whatsapp-for-linux
 
@@ -392,6 +396,8 @@
   services.dbus.packages = with pkgs; [
     xfce.xfconf
   ];
+
+  services.teamviewer.enable = true;
 
   environment.sessionVariables = {
     FLAKE = "/home/stoffi05/nixos";
