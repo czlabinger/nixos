@@ -146,6 +146,7 @@
     polkit
     polkit_gnome
     hypridle
+    hyprpanel
     dbus
     hyprlock
     wofi
