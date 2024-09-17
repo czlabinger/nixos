@@ -9,6 +9,11 @@
     ./../../modules/nixos/nix
   ];
 
+  swapDevices = [{
+    device = "/swapfile";
+    size = 32 * 1024; # 16GB
+  }];
+
   security.pam.services.hyprlock.text = "auth include login";
 
   networking.hostName = "WKS012-NixOS";
@@ -159,6 +164,7 @@
     docker
     flutter
     git
+    git-lfs
     jdk21
     maven
     nodePackages.typescript
@@ -173,7 +179,8 @@
     rustup
     vim
     vimPlugins.flutter-tools-nvim
-    vscode
+    vscodium-fhs
+    cudaPackages.cudatoolkit
 
     # Editors
     gnome-text-editor
@@ -224,11 +231,14 @@
     libz
 
     # Miscellaneous
+    anki-bin
     cava
     fzf
     gnome-multi-writer
     grim
     hollywood
+    texliveFull
+    texlivePackages.latexmk
     spotify
     vlc
     wxmaxima
@@ -260,6 +270,7 @@
     # Programming Tools
     arduino
     arduino-ide
+    cmake
     dart
     flutter
     insomnia
@@ -294,7 +305,6 @@
     # Terminal Emulators
     foot
     kitty
-    warp-terminal
 
     # Text Editors
     gnome-text-editor
@@ -334,7 +344,6 @@
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
-    alias cd='z $1'
   '';
 
   programs.java = {
@@ -397,7 +406,6 @@
     xfce.xfconf
   ];
 
-  services.teamviewer.enable = true;
 
   environment.sessionVariables = {
     FLAKE = "/home/stoffi05/nixos";

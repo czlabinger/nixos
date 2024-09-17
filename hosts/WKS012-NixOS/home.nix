@@ -18,6 +18,12 @@
 
   home.stateVersion = "23.11"; # Don't edit!
 
+  home.packages = with pkgs; [
+    (writeShellScriptBin "google-chrome" ''
+      google-chrome-stable "$@"
+    '')
+  ];
+
   home.file = {
     ".jdk".source = pkgs.jdk21;
 

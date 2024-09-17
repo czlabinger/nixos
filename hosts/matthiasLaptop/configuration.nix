@@ -223,14 +223,13 @@
     brightnessctl
     imagemagick
     vmware-workstation
-    warp-terminal
+    texliveTeTeX
   ];
 
   environment.interactiveShellInit = ''
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
-    alias cd='z $1'
   '';
 
   programs.java = {
