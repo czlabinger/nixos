@@ -9,9 +9,11 @@
     ./../../modules/nixos/nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   swapDevices = [{
     device = "/swapfile";
-    size = 32 * 1024; # 16GB
+    size = 32 * 1024; # 32GB
   }];
 
   security.pam.services.hyprlock.text = "auth include login";
@@ -161,16 +163,21 @@
     alejandra
     cargo
     dart
+    devpod
     docker
     flutter
     git
     git-lfs
     jdk21
+    #jdk17
+    gcc-arm-embedded
+    gnumake
     maven
     nodePackages.typescript
     nodejs_22
     nix-prefetch-git
     ocamlPackages.ssl
+    libgcc
     python311Packages.pip
     python311
     python311Packages.pip
@@ -219,6 +226,8 @@
 
     hyprpanel
 
+    xwayland
+
     # Keyboards
     fcitx5
     xkeyboard_config
@@ -226,6 +235,7 @@
     # Libraries
     glibc
     libGL
+    libGLU
     libglvnd
     libnotify
     libz
@@ -274,7 +284,6 @@
     dart
     flutter
     insomnia
-    jdk21
     maven
     nodePackages.typescript
     nodejs_22
@@ -329,10 +338,13 @@
     pkg-config
     pv
     steam
+    teams-for-linux
     tesseract4
     virt-manager
     virtio-win
     virtiofsd
+
+    pacman
   ];
 
   environment.interactiveShellInit = ''
@@ -340,6 +352,8 @@
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
     export __VK_LAYER_NV_optimus=NVIDIA_only
+    export CMAKE_C_COMPILER=${pkgs.libgcc}/
+    export CMAKE_CXX_COMPILER=${pkgs.libgcc}/
 
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
@@ -349,6 +363,7 @@
   programs.java = {
     enable = true;
     package = pkgs.jdk21;
+    #package = pkgs.jdk17;
   };
 
   fonts.packages = with pkgs; [
@@ -361,6 +376,8 @@
 
   environment.etc = with pkgs; {
     "openjdk21".source = jdk21;
+    #"openjdk17".source = jdk17;
+    "makepkg.conf".source = "${pacman}/etc/makepkg.conf";
   };
 
   virtualisation = {
@@ -405,7 +422,6 @@
   services.dbus.packages = with pkgs; [
     xfce.xfconf
   ];
-
 
   environment.sessionVariables = {
     FLAKE = "/home/stoffi05/nixos";

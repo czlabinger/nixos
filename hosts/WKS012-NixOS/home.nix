@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}: {
+{pkgs, ...}: {
   imports = [
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/foot
@@ -26,6 +26,7 @@
 
   home.file = {
     ".jdk".source = pkgs.jdk21;
+    #".jdk17".source = pkgs.jdk17;
 
     ".python".source = pkgs.python3;
 

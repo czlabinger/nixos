@@ -9,6 +9,8 @@
     ./../../modules/nixos/nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   security.pam.services.hyprlock.text = "auth include login";
 
   networking.hostName = "matthiasLaptop";
