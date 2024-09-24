@@ -82,7 +82,10 @@
     nixosConfigurations.ISO = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
+        (import ./modules/nixos/overlays)
+        ./hosts/iso/conf.nix
         ./hosts/iso/configuration.nix
+        inputs.home-manager.nixosModules.default
       ];
     };
   };

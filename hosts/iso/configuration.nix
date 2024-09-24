@@ -1,21 +1,10 @@
 {
-  pkgs,
   modulesPath,
   ...
 }: {
   imports = [
-    "${modulesPath}/installer/cd-dvd/installation-cd-graphical-gnome.nix"
+    "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
     "${modulesPath}/installer/cd-dvd/channel.nix"
-  ];
-
-  environment.systemPackages = with pkgs; [
-    neovim
-    disko
-    parted
-    git
-    kitty
-    foot
-    zsh
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";

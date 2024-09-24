@@ -1,7 +1,7 @@
 {...}: {
   programs.kitty = {
     enable = true;
-    theme = "Tokyo Night";
+    themeFile = "tokyo_night_night";
     font.name = "JetBrainsMono Nerd Font";
     settings = {
       confirm_os_window_close = -0;
