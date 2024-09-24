@@ -34,7 +34,7 @@ jobs:
 
       - name: Setup channel
         shell: bash
-        run: nix-channel --add https://nixos.org/channels/nixpkgs-unstable & nix-channel --update
+        run: nix-channel --add https://nixos.org/channels/nixpkgs-unstable & nix-channel --update & echo $NIX_PATH
 
       - name: Build ISO Images
         shell: bash
