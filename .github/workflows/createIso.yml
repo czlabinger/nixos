@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
-          nix-env -iA nixpkgs.nixos-generators
+          nix-env -iA nixos-generators
 
       - name: Build ISO Images
         shell: bash
