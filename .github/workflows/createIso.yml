@@ -5,6 +5,9 @@ on:
 
 concurrency: build
 
+env:
+  NIX_PATH: nixpkgs=https://nixos.org/channels/nixpkgs-unstable
+
 jobs:
   build-images:
     name: "Build ISO Images"
