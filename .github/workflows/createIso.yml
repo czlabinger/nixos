@@ -31,7 +31,7 @@ jobs:
 
       - name: Print chennel
         shell: bash
-        run: nix-channel --list
+        run: echo $(nix-channel --list)
 
       - name: Build ISO Images
         shell: bash
