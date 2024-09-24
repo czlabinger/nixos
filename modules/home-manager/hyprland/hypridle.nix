@@ -2,11 +2,13 @@
   services.hypridle = {
     enable = true;
     settings = {
-      lockCmd = "hyrplock";
-      ignoreDbusInhibit = false;
-      beforeSleepCmd = "hyprlock";
+      general = {
+        lockCmd = "hyrplock";
+        ignoreDbusInhibit = false;
+        beforeSleepCmd = "hyprlock";
+      };
 
-      listeners = [
+      listener = [
         {
           timeout = 3 * 60;
           onTimeout = "hyprlock";
