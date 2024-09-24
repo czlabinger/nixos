@@ -29,13 +29,13 @@ jobs:
             extra-substituters = https://hyprland.cachix.org
             extra-trusted-public-keys = hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=
 
-      - name: Setup channel
+      - name: Print chennel
         shell: bash
-        run: nix-channel --add https://nixos.org/channels/nixpkgs-unstable & nix-channel --update & echo $NIX_PATH
+        run: nix-channel --list
 
       - name: Build ISO Images
         shell: bash
-        run: NIX_PATH=nixpkgs=https://nixos.org/channels/nixpkgs-unstable nix-shell -p nixos-generators --run "nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result"
+        run: nix-shell -p nixos-generators --run "nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result"
 
       - uses: actions/upload-artifact@v4
         with:
