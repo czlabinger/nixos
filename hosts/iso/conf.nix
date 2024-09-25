@@ -117,25 +117,17 @@
     # Development
     arduino-ide
     cargo
-    dart
-    devpod
-    docker
-    flutter
     git
     jdk21
     #jdk17
-    gcc-arm-embedded
-    gnumake
     maven
     nodePackages.typescript
     nodejs_22
     ocamlPackages.ssl
     libgcc
     python311Packages.pip
-    rust-analyzer
     rustup
     vim
-    vimPlugins.flutter-tools-nvim
     vscodium-fhs
 
     # Editors
@@ -149,7 +141,6 @@
     font-manager
 
     # Graphics
-    gimp
     glxinfo
     mupdf
     imagemagick
@@ -189,14 +180,8 @@
     cava
     fzf
     grim
-    hollywood
-    spotify
-    vlc
     wxmaxima
-    ydotool
     zip
-    zoxide
-    cbonsai
 
     # Network
     busybox
@@ -214,21 +199,14 @@
     # Notification
     dunst
 
-    # Productivity
-    foliate
-    wpsoffice
-
     # Programming Tools
     cmake
-    dart
-    flutter
     insomnia
     maven
     nodePackages.typescript
     ocamlPackages.ssl
     rust-analyzer
     rustup
-    yarn
 
     # Shells
     oh-my-zsh
@@ -248,7 +226,6 @@
     virtiofsd
 
     # Terminal Emulators
-    foot
     kitty
 
     # Utilities
@@ -257,7 +234,6 @@
     coreutils
     dconf
     fceux
-    foliate
     glibc
     hollywood
     imagemagick
