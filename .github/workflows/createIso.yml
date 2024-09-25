@@ -32,9 +32,6 @@ jobs:
             extra-substituters = https://hyprland.cachix.org
             extra-trusted-public-keys = hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=
 
-      - name: Nix Magic Cache
-        uses: DeterminateSystems/magic-nix-cache-action@main
-
       - name: Build ISO Images
         shell: bash
         run: nix build .#nixosConfigurations.ISO.config.system.build.isoImage
