@@ -1,3 +1,5 @@
+name: Build & Publish ISO Images
+
 on:
   workflow_dispatch:
   schedule:
@@ -29,22 +31,19 @@ jobs:
             extra-substituters = https://hyprland.cachix.org
             extra-trusted-public-keys = hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=
 
-      - name: Setup env
-        shell: bash
-        run: |
-          nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
-          nix-env -iA nixos-generators
+      - name: Nix Magic Cache
+        uses: DeterminateSystems/magic-nix-cache-action@main
 
       - name: Build ISO Images
         shell: bash
-        run: nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result
+        run: nix-shell -p nixos-generators --run "nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result"
 
       - uses: actions/upload-artifact@v4
         with:
           name: WKS012-NixOS-iso-image
-          path: ./result/iso/*.iso
+          path: result/iso/*.iso
 
-    
+  # publish built images
   publish-images:
     name: "Publish ISO Images"
     runs-on: ubuntu-latest
@@ -71,7 +70,7 @@ jobs:
             sha256sum "$1" | awk '{print $1}'
           }
 
-          iso_files=$(find ./result/iso -maxdepth 1 -type f -name "*.iso")
+          iso_files=$(find ./result/iso/ -maxdepth 1 -type f -name "*.iso")
 
           # write checksums
           for file in $iso_files; do
@@ -98,3 +97,4 @@ jobs:
 
             > ${{ steps.get-date.outputs.date }}
 
+            Weekly automated ISO releases for my Portable NixOS workstation.
