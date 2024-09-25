@@ -97,7 +97,7 @@ jobs:
           name: "iso-${{ steps.get-date.outputs.date }}"
           tag_name: "iso-${{ steps.get-date.outputs.date }}"
           files: |
-            *.iso
+            iso-${{ steps.get-date.outputs.date }}.zip
             checksums.txt
           body: |
             # Weekly Iso Releases
