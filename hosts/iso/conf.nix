@@ -139,7 +139,6 @@
     vscodium-fhs
 
     # Editors
-    gnome-text-editor
     neovide
     neovim
 
@@ -169,7 +168,6 @@
     # Hyprland
     hypridle
     hyprlock
-    hyprpicker
     hyprpanel
 
     wlogout
@@ -227,7 +225,6 @@
     insomnia
     maven
     nodePackages.typescript
-    nodejs_22
     ocamlPackages.ssl
     rust-analyzer
     rustup
@@ -268,12 +265,6 @@
     neofetch
     pkg-config
     pv
-    steam
-    teams-for-linux
-    tesseract4
-    virt-manager
-    virtio-win
-    virtiofsd
   ];
 
   environment.interactiveShellInit = ''
