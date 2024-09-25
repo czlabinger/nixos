@@ -37,7 +37,7 @@ jobs:
 
       - name: Build ISO Images
         shell: bash
-        run: nix-shell -p nixos-generators --run "nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result"
+        run: nix build .#nixosConfigurations.ISO.config.system.build.isoImage
 
       - uses: actions/upload-artifact@v4
         with:

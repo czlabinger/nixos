@@ -5,17 +5,7 @@
 }: {
   imports = [
     ./../../modules/nixos/nix
-    ../../modules/home-manager/hyprland
-    ../../modules/home-manager/foot
-    ../../modules/home-manager/zsh
-    ../../modules/home-manager/starship
-    ../../modules/home-manager/wofi
-    ../../modules/home-manager/neovim
-    ../../modules/home-manager/kitty
-    ../../modules/home-manager/neofetch
-    ../../modules/home-manager/firefox 
   ];
-
 
   swapDevices = [{
     device = "/swapfile";
@@ -55,8 +45,6 @@
     wayland = true;
   };
 
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -93,24 +81,6 @@
     extraPackages32 = with pkgs.pkgsi686Linux; [mesa];
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
-
-  hardware.nvidia = {
-    open = true;
-    modesetting.enable = true;
-    
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-      intelBusId = "PCI:0:2:0";
-
-      nvidiaBusId = "PCI:1:0:0";
-    };
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -349,8 +319,6 @@
   environment.interactiveShellInit = ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-    export __GLX_VENDOR_LIBRARY_NAME=nvidia
-    export __VK_LAYER_NV_optimus=NVIDIA_only
     export CMAKE_C_COMPILER=${pkgs.libgcc}/
     export CMAKE_CXX_COMPILER=${pkgs.libgcc}/
 

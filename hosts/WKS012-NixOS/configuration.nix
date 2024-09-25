@@ -226,6 +226,7 @@
 
     hyprpanel
 
+    swww
     xwayland
 
     # Keyboards
