@@ -29,13 +29,15 @@ jobs:
             extra-substituters = https://hyprland.cachix.org
             extra-trusted-public-keys = hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=
 
-      - name: Setup channel
+      - name: Setup env
         shell: bash
-        run: nix-channel --add https://nixos.org/channels/nixpkgs-unstable & nix-channel --update
+        run: |
+          nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+          nix-env -iA nixos-generators
 
       - name: Build ISO Images
         shell: bash
-        run: nix-shell -p nixos-generators --run "nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result"
+        run: nixos-generate --format iso --configuration ./hosts/iso/configuration.nix -o result
 
       - uses: actions/upload-artifact@v4
         with:
@@ -95,9 +97,4 @@ jobs:
             # Weekly Iso Releases
 
             > ${{ steps.get-date.outputs.date }}
-
-            Weekly automated ISO releases for my Portable NixOS workstation. The ISO images avaible are as follows:
-
-            * **nebula**: Headless installation media
-            * **messier**: Graphical installation media
 
