@@ -16,6 +16,11 @@ jobs:
       contents: write
 
     steps:
+      - name: Make space
+        run: |
+              sudo rm -rf /usr/share/dotnet
+              sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+    
       - name: Checkout
         uses: actions/checkout@v4
         with:
