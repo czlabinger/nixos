@@ -71,7 +71,7 @@ jobs:
             sha256sum "$1" | awk '{print $1}'
           }
 
-          iso_files=$(find ./result/iso/ -maxdepth 1 -type f -name "*.iso")
+          iso_files=$(find . -maxdepth 1 -type f -name "*.iso")
 
           # write checksums
           for file in $iso_files; do
