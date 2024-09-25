@@ -4,7 +4,6 @@
     ../../modules/home-manager/zsh
     ../../modules/home-manager/starship
     ../../modules/home-manager/wofi
-    ../../modules/home-manager/neovim
     ../../modules/home-manager/kitty
     ../../modules/home-manager/firefox
   ];

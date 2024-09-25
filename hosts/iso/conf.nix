@@ -108,8 +108,6 @@
     webcord
 
     # Development
-    arduino-ide
-    cargo
     git
     jdk21
     #jdk17
@@ -120,12 +118,7 @@
     libgcc
     python311Packages.pip
     rustup
-    vim
     vscodium-fhs
-
-    # Editors
-    neovide
-    neovim
 
     # File Managers
     xfce.thunar
@@ -242,7 +235,6 @@
     export CMAKE_C_COMPILER=${pkgs.libgcc}/
     export CMAKE_CXX_COMPILER=${pkgs.libgcc}/
 
-    alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
   '';
@@ -256,7 +248,6 @@
   environment.etc = with pkgs; {
     "openjdk21".source = jdk21;
     #"openjdk17".source = jdk17;
-    "makepkg.conf".source = "${pacman}/etc/makepkg.conf";
   };
 
   # Some programs need SUID wrappers, can be configured further or are

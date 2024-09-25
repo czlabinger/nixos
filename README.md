@@ -50,3 +50,4 @@ sudo nixos-rebuild --flake .#WKS012-NixOS switch
 
 ## Thanks to
 - [vimjoyer](https://www.youtube.com/@vimjoyer) for their videos
+- []() for the iso generation workfolow
