@@ -106,13 +106,6 @@
  
     # Communication
     webcord
-    whatsapp-for-linux
-
-    # Cursors & Icons
-    bibata-cursors
-    beauty-line-icon-theme
-    qogir-icon-theme
-    nixos-icons
 
     # Development
     arduino-ide
@@ -259,14 +252,6 @@
     package = pkgs.jdk21;
     #package = pkgs.jdk17;
   };
-
-  fonts.packages = with pkgs; [
-    material-icons
-    roboto-mono
-    font-awesome
-    noto-fonts-emoji
-    (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "JetBrainsMono" "Iosevka" "SpaceMono"];})
-  ];
 
   environment.etc = with pkgs; {
     "openjdk21".source = jdk21;

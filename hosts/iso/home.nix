@@ -14,12 +14,6 @@
   home.username = "nixos";
   home.homedirectory = "/home/nixos";
 
-  home.packages = with pkgs; [
-    (writeshellscriptbin "google-chrome" ''
-      google-chrome-stable "$@"
-    '')
-  ];
-
   home.file = {
     ".jdk".source = pkgs.jdk21;
     #".jdk17".source = pkgs.jdk17;
