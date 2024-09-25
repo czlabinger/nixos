@@ -7,14 +7,9 @@
     ./../../modules/nixos/nix
   ];
 
-  swapDevices = [{
-    device = "/swapfile";
-    size = 32 * 1024; # 32GB
-  }];
-
   security.pam.services.hyprlock.text = "auth include login";
 
-  networking.hostName = "WKS012-NixOS";
+  networking.hostName = "WKS012-NixOS-ISO";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -55,8 +50,6 @@
   services.printing.enable = true;
 
   hardware.bluetooth.enable = true;
-
-
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -110,13 +103,11 @@
 
     # Browsers
     firefox
-    google-chrome
 
     # Clipboard
     wl-clipboard
  
     # Communication
-    discord
     webcord
     whatsapp-for-linux
 
@@ -127,16 +118,13 @@
     nixos-icons
 
     # Development
-    arduino
     arduino-ide
-    alejandra
     cargo
     dart
     devpod
     docker
     flutter
     git
-    git-lfs
     jdk21
     #jdk17
     gcc-arm-embedded
@@ -144,19 +132,14 @@
     maven
     nodePackages.typescript
     nodejs_22
-    nix-prefetch-git
     ocamlPackages.ssl
     libgcc
     python311Packages.pip
-    python311
-    python311Packages.pip
-    python311Packages.gpustat
     rust-analyzer
     rustup
     vim
     vimPlugins.flutter-tools-nvim
     vscodium-fhs
-    cudaPackages.cudatoolkit
 
     # Editors
     gnome-text-editor
@@ -172,7 +155,6 @@
     # Graphics
     gimp
     glxinfo
-    inkscape-with-extensions
     mupdf
     imagemagick
 
@@ -191,10 +173,9 @@
     hypridle
     hyprlock
     hyprpicker
-    wlogout
-
     hyprpanel
 
+    wlogout
     xwayland
 
     # Keyboards
@@ -210,14 +191,10 @@
     libz
 
     # Miscellaneous
-    anki-bin
     cava
     fzf
-    gnome-multi-writer
     grim
     hollywood
-    texliveFull
-    texlivePackages.latexmk
     spotify
     vlc
     wxmaxima
@@ -247,8 +224,6 @@
     wpsoffice
 
     # Programming Tools
-    arduino
-    arduino-ide
     cmake
     dart
     flutter
@@ -259,8 +234,6 @@
     ocamlPackages.ssl
     rust-analyzer
     rustup
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
     yarn
 
     # Shells
@@ -284,15 +257,7 @@
     foot
     kitty
 
-    # Text Editors
-    gnome-text-editor
-    vim
-    vimPlugins.flutter-tools-nvim
-    neovide
-    neovim
-
     # Utilities
-    appimage-run
     baobab
     busybox
     coreutils
@@ -312,8 +277,6 @@
     virt-manager
     virtio-win
     virtiofsd
-
-    pacman
   ];
 
   environment.interactiveShellInit = ''
@@ -345,17 +308,6 @@
     "openjdk21".source = jdk21;
     #"openjdk17".source = jdk17;
     "makepkg.conf".source = "${pacman}/etc/makepkg.conf";
-  };
-
-  virtualisation = {
-    docker = {
-      enable = true;
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
-    };
-    virtualbox.host.enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
