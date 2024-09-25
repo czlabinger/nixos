@@ -86,6 +86,10 @@ jobs:
         # output format: 2023-12-30-234559
         run: echo "date=$(date +'%Y-%m-%d-%H%M%S')" >> "${GITHUB_OUTPUT}"
 
+      - name: Zip Iso
+        shell: bash
+        run: zip iso-${{ steps.get-date.outputs.date }}.zip *.iso
+
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
