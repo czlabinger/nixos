@@ -14,7 +14,6 @@
   security.pam.services.hyprlock.text = "auth include login";
 
   networking.hostName = "matthiasLaptop";
-  #networking.wireless.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;

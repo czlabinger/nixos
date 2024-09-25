@@ -13,7 +13,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  networking.wireless.wifi.backend = "iwd";
+  
   # Set your time zone.
   time.timeZone = "Europe/Vienna";
 
