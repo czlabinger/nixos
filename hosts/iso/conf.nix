@@ -94,30 +94,16 @@
     playerctl
     wireplumber
 
-    # Bluetooth
-    bluez
-    blueberry
-
     # Browsers
     firefox
 
     # Clipboard
     wl-clipboard
  
-    # Communication
-    webcord
-
     # Development
     git
-    jdk21
-    #jdk17
-    maven
-    nodePackages.typescript
-    nodejs_22
     ocamlPackages.ssl
     libgcc
-    python311Packages.pip
-    rustup
     vscodium-fhs
 
     # File Managers
@@ -128,8 +114,6 @@
 
     # Graphics
     glxinfo
-    mupdf
-    imagemagick
 
     # GTK
     adw-gtk3
@@ -163,10 +147,6 @@
     libz
 
     # Miscellaneous
-    cava
-    fzf
-    grim
-    wxmaxima
     zip
 
     # Network
@@ -185,15 +165,6 @@
     # Notification
     dunst
 
-    # Programming Tools
-    cmake
-    insomnia
-    maven
-    nodePackages.typescript
-    ocamlPackages.ssl
-    rust-analyzer
-    rustup
-
     # Shells
     oh-my-zsh
     starship
@@ -204,29 +175,16 @@
     coreutils
     dconf
     lsd
-    neofetch
     pkg-config
     pv
-    virt-manager
-    virtio-win
-    virtiofsd
 
     # Terminal Emulators
     kitty
 
     # Utilities
-    baobab
-    busybox
-    coreutils
     dconf
     fceux
     glibc
-    hollywood
-    imagemagick
-    lsd
-    neofetch
-    pkg-config
-    pv
   ];
 
   environment.interactiveShellInit = ''
