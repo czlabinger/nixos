@@ -102,7 +102,6 @@
  
     # Development
     git
-    ocamlPackages.ssl
     libgcc
     vscodium-fhs
 
