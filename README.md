@@ -12,9 +12,9 @@
 
 ## My NixOS config
 
-I'm new to NixOS so please if you hure you change it!
+I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
 
-
+Neofetch uses ab absolute image path! Make sure you change it!
 
 * **WM**: Hyprland 
 * **OS**: NixOS 󱄅
