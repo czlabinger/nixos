@@ -221,11 +221,13 @@
     # Hyprland
     hypridle
     hyprlock
+    hyprls
     hyprpicker
     wlogout
 
     hyprpanel
 
+    slurp
     swww
     xwayland
 
