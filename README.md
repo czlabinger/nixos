@@ -12,9 +12,19 @@
 
 ## My NixOS config
 
-I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
+I'm new to NixOS so please if you hure you change it!
 
-Neofetch uses ab absolute image path! Make sure you change it!
+
+
+* **WM**: Hyprland 
+* **OS**: NixOS 󱄅
+* **Shell**: Zsh/Starship 
+* **Terminal**: kitty 
+* **Panel**: HyprPanel 
+* **Notify Daemon**: Dunst 
+* **Launcher**: Wofi
+* **File Manager**: Thunar 
+* **IDE**: Neovim/Codium 
 
 ## Showcase
 
