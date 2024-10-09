@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Start Page</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e2d;
+            color: #a4efff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+        a {
+            color: #a4efff;
+            text-decoration: none;
+        }
+        .links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .links div {
+            text-align: left;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome $HOME!</h1>
+        <div class="links">
+            <div>
+                <h2>~/dev</h2>
+                <a href="https://github.com">Github</a><br>
+                <a href="https://www.gnu.org/software/libc/">glibc Docs</a><br>
+                <a href="https://www.reddit.com/r/unixporn/">r/unixporn</a>
+            </div>
+            <div>
+                <h2>~/general</h2>
+                <a href="https://www.reddit.com">Reddit</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

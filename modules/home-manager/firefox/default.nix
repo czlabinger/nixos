@@ -6,6 +6,31 @@
   programs.firefox = {
     enable = true;
     profiles.stoffi05 = {
+      settings = {
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "svg.context-properties.content.enabled" = true;
+      };
+      userChrome = ''
+        .urlbar-input-box { text-align: center; }
+
+        * {
+          font-family: "monospace";
+        }
+
+        .browserContainer browser {
+          border-radius: 5px !important;
+          /* margin: 0vh 1vh 2vh 0vh; */
+        }
+
+        #navigator-toolbox {
+          max-height: 100vh;
+    
+          & * {
+            opacity: 1;
+          }
+        }
+
+      '';
       #bookmarks = [];
       search.engines = {
         "Nix Packages" = {

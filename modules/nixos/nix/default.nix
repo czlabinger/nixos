@@ -3,14 +3,8 @@
     settings = {
       auto-optimise-store = true;
 
-      substituters = [
-        "https://hyprland.cachix.org"
-        #"https://192.168.123.71:54321"
-      ];
-      trusted-public-keys = [
-        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" 
-        #"192.168.123.71:3htfkeaAxwll01vGHm3Dg/XvTKiVw1Xb1fEyMvpAtLw="
-      ];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
 
       experimental-features = ["nix-command" "flakes"];
     };
