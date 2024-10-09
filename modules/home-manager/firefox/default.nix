@@ -30,6 +30,11 @@
           }
         }
 
+
+        @-moz-document url-prefix(about:newtab) {
+          
+        }
+
       '';
       #bookmarks = [];
       search.engines = {
@@ -65,6 +70,7 @@
         ublock-origin
         darkreader
         i-dont-care-about-cookies
+        new-tab-override
       ];
     };
   };
