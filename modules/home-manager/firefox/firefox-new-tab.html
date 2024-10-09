@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Start Page</title>
+    <title>New Tab</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -24,7 +24,8 @@
         a {
             color: #a4efff;
             text-decoration: none;
-        }
+        	line-height: 2;
+		}
         .links {
             display: flex;
             justify-content: space-around;
@@ -36,22 +37,74 @@
         .links a:hover {
             text-decoration: underline;
         }
+        #searchForm {
+            margin: 20px 0;
+        }
+        #prompt {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+		#searchInput {
+            padding: 10px;
+            font-size: 16px;
+            margin-left: 5px;
+            border: 1px solid #a9d1f5;
+            border-radius: 5px;
+			background-color: #2a2d3d;
+            color: #a9d1f5; 
+            outline: none;
+        }
+        #searchInput::placeholder {
+            color: #5c7c99;
+        }
+        #searchInput:focus {
+            border: 1px solid #5c7c99;
+            background-color: #2e313f;
+        }
+        input[type="submit"] {
+            background-color: #5c7c99;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+			border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4a626f;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome $HOME!</h1>
-        <div class="links">
+		    <form id="searchForm" action="https://www.google.com/search" method="get">
+        		<span id="prompt">~$</span>
+        		<input type="text" id="searchInput" name="q" placeholder="Search..." autofocus required autocomplete="off">
+    		</form>
+        
+		<div class="links">
             <div>
                 <h2>~/dev</h2>
-                <a href="https://github.com">Github</a><br>
-                <a href="https://www.gnu.org/software/libc/">glibc Docs</a><br>
-                <a href="https://www.reddit.com/r/unixporn/">r/unixporn</a>
+                <a href="https://github.com">Github</a><br />
+				<a href="https://chat.openai.com">ChatGPT</a><br>
+				<a href="https://phind.com">Phind</a>
             </div>
             <div>
                 <h2>~/general</h2>
-                <a href="https://www.reddit.com">Reddit</a>
+				<a href="https://reddit.com">Reddit</a><br />
+				<a href="https://youtube.com">YouTube</a></br />
+				<a href="https://web.whatsapp.com">WhatsApp</a><br />
+				<a href="https://mail.proton.me">Proton Mail</a>
             </div>
+			<div>
+				<h2>~/school</h2>
+				<a href="https://elearning.tgm.ac.at">Elearning</a><br />
+				<a href="https://stpl.tgm.ac.at">Stundenplan</a><br />
+				<a href="https://owa.tgm.ac.at">School-Mail</a><br />
+				<a href="https://digi4school.at">Digi4School</a>
+			</div>
         </div>
     </div>
 </body>
