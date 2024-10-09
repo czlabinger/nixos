@@ -33,10 +33,10 @@ Neofetch uses ab absolute image path! Make sure you change it!
 ![tree](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/4.png)
 
 ### Neovim
-![neovim](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)
+![neovim](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/3.png)
 
 ### Launcher
-![launcher](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/3.png)
+![launcher](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)
 
 
 ## Hosts
