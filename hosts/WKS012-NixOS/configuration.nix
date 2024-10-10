@@ -199,6 +199,7 @@
 
     # Font Managers
     font-manager
+    material-design-icons
 
     # Graphics
     gimp

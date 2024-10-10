@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -74,9 +75,40 @@
         input[type="submit"]:hover {
             background-color: #4a626f;
         }
+		
+		.top-left-text {
+    		position: absolute;
+    		top: 10px;
+    		left: 10px;
+    		font-size: 16px;
+    		color: #a4efff;
+		}
+
+		.file-icons {
+			margin-top: 0.75rem;
+			margin-left: 1rem;
+		}
+		
+		.file-icon {
+			margin-left: 1rem;
+		}
     </style>
 </head>
 <body>
+	<div class="top-left-text">
+		~$ ls <br />
+		<div class="file-icons">
+    		<i class="fas fa-desktop file-icon"></i> Desktop
+    		<i class="fas fa-file-alt file-icon"></i> Documents
+    		<i class="fas fa-folder-open file-icon"></i> Downloads
+			<i class="fas fa-music file-icon"></i> Music
+    		<i class="fa-solid fa-gear file-icon"></i> nixos
+    		<i class="fa-regular fa-image file-icon"></i> Pictures
+    		<i class="fa-regular fa-user file-icon"></i> Public
+    		<i class="fas fa-folder file-icon"></i> Templates
+    		<i class="fa-solid fa-video file-icon"></i> Videos
+		</div>
+	</div>
     <div class="container">
         <h1>Welcome $HOME!</h1>
 		    <form id="searchForm" action="https://www.google.com/search" method="get">
