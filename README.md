@@ -16,15 +16,19 @@ I'm new to NixOS so please if you have any recommendations or something I can im
 
 Neofetch uses ab absolute image path! Make sure you change it!
 
-* **WM**: Hyprland 
-* **OS**: NixOS 󱄅
-* **Shell**: Zsh/Starship 
-* **Terminal**: kitty 
-* **Panel**: HyprPanel 
+<div font-family:"material-design-icons">
+
+* **WM**: Hyprland ![Hyprland](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/hyprland.svg)
+* **OS**: NixOS ![NixOs](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/nixos.svg)
+* **Shell**: Zsh/Starship ![Zsh](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/zsh.svg)
+* **Terminal**: kitty ![Kitty](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/kitty.svg)
+* **Panel**: HyprPanel ![Hyprpanel](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/hyprland.svg)
 * **Notify Daemon**: Dunst 
 * **Launcher**: Wofi
-* **File Manager**: Thunar 
-* **IDE**: Neovim/Codium 
+* **File Manager**: Thunar ![Thunar](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/thunar.svg)
+* **IDE**: Neovim/Codium ![Neovim](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/neovim.svg)
+
+</div>
 
 ## Showcase
 
