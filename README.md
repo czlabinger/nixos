@@ -16,15 +16,15 @@ I'm new to NixOS so please if you have any recommendations or something I can im
 
 Neofetch uses ab absolute image path! Make sure you change it!
 
-* **WM**: Hyprland <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/hyprland.svg" alt="Hyprland" style="max-width: 16px; max-height: 16px;">
-* **OS**: NixOS <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/nixos.svg" alt="NixOs" style="max-width: 16px; max-height: 16px;">
-* **Shell**: Zsh/Starship <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/zsh.svg" alt="Zsh" style="max-width: 16px; max-height: 16px;">
-* **Terminal**: kitty <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/kitty.svg" alt="Kitty" style="max-width: 16px; max-height: 16px;">
-* **Panel**: HyprPanel <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/hyprland.svg" alt="Hyprpanel" style="max-width: 16px; max-height: 16px;">
-* **Notify Daemon**: Dunst
+* **WM**: Hyprland 
+* **OS**: NixOS 󱄅
+* **Shell**: Zsh/Starship 
+* **Terminal**: kitty 
+* **Panel**: HyprPanel 
+* **Notify Daemon**: Dunst 
 * **Launcher**: Wofi
-* **File Manager**: Thunar <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/thunar.svg" alt="Thunar" style="max-width: 16px; max-height: 16px;">
-* **IDE**: Neovim/Codium <img src="https://raw.githubusercontent.com/czlabinger/nixos/main/assets/Icons/neovim.svg" alt="Neovim" style="max-width: 16px; max-height: 16px;">
+* **File Manager**: Thunar 
+* **IDE**: Neovim/Codium 
 
 ## Showcase
 
