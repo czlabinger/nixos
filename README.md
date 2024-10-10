@@ -38,6 +38,8 @@ Neofetch uses ab absolute image path! Make sure you change it!
 ### Launcher
 ![launcher](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/2.png)
 
+### Firefox
+![firefox](https://raw.githubusercontent.com/czlabinger/nixos/main/assets/5.png)
 
 ## Hosts
 
@@ -57,6 +59,8 @@ git clone git@github.com:czlabinger/nixos.git && cd nixos
 cp /etc/nixos/hardware-configuration.nix ./hosts/WKS012-NixOS/
 sudo nixos-rebuild --flake .#WKS012-NixOS switch
 ```
+
+For Firefox start page to work open firefox and activate the 'New Tab Override' extention. Open the settings via Shift+F12 select local file and select '/path/to/nixos/modules/home-manager/firefox/firefox-new-tab.html'
 
 ## Thanks to
 - [vimjoyer](https://www.youtube.com/@vimjoyer) for their videos
