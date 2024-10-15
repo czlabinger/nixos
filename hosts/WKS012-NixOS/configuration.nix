@@ -224,6 +224,7 @@
     hyprlock
     hyprls
     hyprpicker
+    inputs.hyprsysteminfo.packages.${pkgs.system}.default
     wlogout
 
     hyprpanel
@@ -350,6 +351,7 @@
     virtiofsd
 
     pacman
+
   ];
 
   environment.interactiveShellInit = ''

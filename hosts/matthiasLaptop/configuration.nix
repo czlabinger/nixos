@@ -227,6 +227,7 @@
     vmware-workstation
     texliveTeTeX
     onefetch
+    inputs.hyprsysteminfo.packages.${pkgs.system}.default
   ];
 
   environment.interactiveShellInit = ''
