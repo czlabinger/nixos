@@ -508,11 +508,11 @@
         "systems": "systems_5"
       },
       "locked": {
-        "lastModified": 1728866024,
-        "narHash": "sha256-9l8VXdQN04vLueVE78+HCrSaPjs3P+SW0Gvb0GZMy38=",
+        "lastModified": 1728988711,
+        "narHash": "sha256-n8tugSikbJhJn8oYH27b4Zw9RxXnZpmk65ohKFI+VPQ=",
         "owner": "hyprwm",
         "repo": "hyprsysteminfo",
-        "rev": "9b50bb2c297ac65d280ddc49803de71c93932e31",
+        "rev": "00beba904fa73f8e0f582c9a9e9679e7bda77e23",
         "type": "github"
       },
       "original": {

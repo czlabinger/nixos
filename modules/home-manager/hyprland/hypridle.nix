@@ -3,20 +3,20 @@
     enable = true;
     settings = {
       general = {
-        lockCmd = "hyrplock";
-        ignoreDbusInhibit = false;
-        beforeSleepCmd = "hyprlock";
+        lock_cmd = "hyrplock";
+        ignore_dbus_inhibit = false;
+        before_sleep_cmd = "hyprlock";
       };
 
       listener = [
         {
           timeout = 3 * 60;
-          onTimeout = "hyprlock";
+          on-timeout = "hyprlock";
         }
         {
           timeout = 8 * 60;
-          onTimeout = "${pkgs.coreutils}/bin/sleep 1 && systemctl suspend";
-          onResume = "hyprctl dispatch dpms on";
+          on-timeout = "${pkgs.coreutils}/bin/sleep 1 && systemctl suspend";
+          on-resume = "hyprctl dispatch dpms on";
         }
       ];
     };
