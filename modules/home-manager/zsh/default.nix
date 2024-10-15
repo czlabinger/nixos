@@ -14,6 +14,7 @@
       theme = "agnoster";
       extraConfig = ''
         eval "$(zoxide init zsh)"
+        eval "$(onefetch --generate zsh)"
       '';
     };
   };
