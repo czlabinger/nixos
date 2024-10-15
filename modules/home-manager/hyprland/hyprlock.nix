@@ -12,8 +12,8 @@
       background = [
         {
           #Broken again
-          #path = "screenshot";
-          path = "/home/stoffi05/Pictures/lucy.jpg";
+          path = "screenshot";
+          #path = "/home/stoffi05/Pictures/lucy.jpg";
           blur_passes = 4;
           blur_size = 4;
           contrast = 1.2;
