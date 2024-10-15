@@ -226,6 +226,7 @@
     imagemagick
     vmware-workstation
     texliveTeTeX
+    onefetch
   ];
 
   environment.interactiveShellInit = ''

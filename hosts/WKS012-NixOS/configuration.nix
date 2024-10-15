@@ -251,6 +251,7 @@
     gnome-multi-writer
     grim
     hollywood
+    onefetch
     texliveFull
     texlivePackages.latexmk
     spotify

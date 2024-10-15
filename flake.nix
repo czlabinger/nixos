@@ -43,6 +43,8 @@
 
     hyprcursor.url = "github:hyprwm/hyprcursor";
 
+    hyprsysteminfo.url= "github:hyprwm/hyprsysteminfo"; 
+
     xdg-desktop-portal-hyprland = {
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
     };
