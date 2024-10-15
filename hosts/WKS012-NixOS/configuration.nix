@@ -352,6 +352,9 @@
 
     pacman
 
+    # QT
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
   ];
 
   environment.interactiveShellInit = ''
