@@ -193,6 +193,7 @@
     gnome-text-editor
     neovide
     neovim
+    zed-editor
 
     # File Managers
     xfce.thunar
@@ -349,7 +350,8 @@
     virt-manager
     virtio-win
     virtiofsd
-
+    libclang
+    llvmPackages_17.clang
     pacman
 
     # QT
@@ -368,6 +370,8 @@
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
+    alias zed='DRI_PRIME=1 zeditor'
+    alias zeditor='DRI_PRIME=1 zeditor'
   '';
 
   programs.java = {

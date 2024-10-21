@@ -229,12 +229,15 @@
     onefetch
     inputs.hyprsysteminfo.packages.${pkgs.system}.default
     kdePackages.qt6ct
+    zed-editor
   ];
 
   environment.interactiveShellInit = ''
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
-    alias ls='lsd $1'
+    alias ls='lsd $1'  
+    alias zed='DRI_PRIME=1 zeditor'
+    alias zeditor='DRI_PRIME=1 zeditor'
   '';
 
   programs.java = {

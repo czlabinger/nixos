@@ -20,6 +20,9 @@
     settings = {
       ######################### General Config #########################
 
+      debug = {
+        disable_logs = false;
+      };
       # MONITOR CONFIG
       monitor = [
         ",preferred,auto,1"
