@@ -19,6 +19,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zeditor.url = "github:zed-industries/zed";
+
     ################### Hypr ########################
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
