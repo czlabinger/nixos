@@ -228,6 +228,7 @@
     texliveTeTeX
     onefetch
     inputs.hyprsysteminfo.packages.${pkgs.system}.default
+    inputs.hyprpolkitagent.packages.${pkgs.system}.default
     kdePackages.qt6ct
     zed-editor
   ];

@@ -47,6 +47,8 @@
 
     hyprsysteminfo.url= "github:hyprwm/hyprsysteminfo"; 
 
+    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
+
     xdg-desktop-portal-hyprland = {
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
     };

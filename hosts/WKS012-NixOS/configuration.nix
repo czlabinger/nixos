@@ -162,6 +162,7 @@
     arduino-ide
     alejandra
     cargo
+    cudaPackages.cudatoolkit
     dart
     devpod
     docker
@@ -175,6 +176,7 @@
     maven
     nodePackages.typescript
     nodejs_22
+    nixd
     nix-prefetch-git
     ocamlPackages.ssl
     libgcc
@@ -187,7 +189,6 @@
     vim
     vimPlugins.flutter-tools-nvim
     vscodium-fhs
-    cudaPackages.cudatoolkit
 
     # Editors
     gnome-text-editor
@@ -226,6 +227,7 @@
     hyprls
     hyprpicker
     inputs.hyprsysteminfo.packages.${pkgs.system}.default
+    inputs.hyprpolkitagent.packages.${pkgs.system}.default
     wlogout
 
     hyprpanel
