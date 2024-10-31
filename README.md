@@ -12,7 +12,7 @@
 
 ## My NixOS config
 
-I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
+If you have any recommendations or something I can improve feel free to open a PR/Issue.
 
 Neofetch uses ab absolute image path! Make sure you change it!
 
