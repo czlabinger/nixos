@@ -64,4 +64,3 @@ For Firefox start page to work open firefox and activate the 'New Tab Override' 
 
 ## Thanks to
 - [vimjoyer](https://www.youtube.com/@vimjoyer) for their videos
-- [sukhmancs](https://github.com/sukhmancs/nixos-configs) for the iso generation workfolow
