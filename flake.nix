@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zeditor.url = "github:zed-industries/zed";
+    notion-calendar-electron.url = "github:czlabinger/notion-calendar-electron";
 
     ################### Hypr ########################
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";

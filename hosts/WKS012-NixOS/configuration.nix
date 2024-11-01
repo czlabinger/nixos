@@ -184,6 +184,7 @@
     python311
     python311Packages.pip
     python311Packages.gpustat
+    python311Packages.ipykernel
     rust-analyzer
     rustup
     vim
@@ -241,7 +242,6 @@
     xkeyboard_config
 
     # Libraries
-    glibc
     libGL
     libGLU
     libglvnd
@@ -255,6 +255,7 @@
     gnome-multi-writer
     grim
     hollywood
+    inputs.notion-calendar-electron.packages.${pkgs.system}.default
     onefetch
     texliveFull
     texlivePackages.latexmk
@@ -372,8 +373,8 @@
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
-    alias zed='DRI_PRIME=1 zed'
-    alias zeditor='DRI_PRIME=1 zed'
+    alias zed='DRI_PRIME=1 zeditor'
+    alias zeditor='DRI_PRIME=1 zeditor'
   '';
 
   programs.java = {
