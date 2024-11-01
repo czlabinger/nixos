@@ -12,7 +12,7 @@
 
 ## My NixOS config
 
-I'm new to NixOS so please if you have any recommendations or something I can improve open a PR/Issue.
+If you have any recommendations or something I can improve feel free to open a PR/Issue.
 
 Neofetch uses ab absolute image path! Make sure you change it!
 
@@ -64,4 +64,3 @@ For Firefox start page to work open firefox and activate the 'New Tab Override' 
 
 ## Thanks to
 - [vimjoyer](https://www.youtube.com/@vimjoyer) for their videos
-- [sukhmancs](https://github.com/sukhmancs/nixos-configs) for the iso generation workfolow
