@@ -92,7 +92,7 @@
   hardware.nvidia = {
     open = true;
     modesetting.enable = true;
-    
+
     prime = {
       offload = {
         enable = true;
@@ -128,7 +128,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-  
+
     # Audio
     pulseaudio
     pavucontrol
@@ -145,9 +145,10 @@
 
     # Clipboard
     wl-clipboard
- 
+
     # Communication
     discord
+    element-desktop-wayland
     webcord
     whatsapp-for-linux
 

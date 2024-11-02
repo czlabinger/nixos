@@ -61,6 +61,16 @@
   };
 
   # 'home.sessionVariables'. # Change env variables
+  
+  xdg.desktopEntries = {
+    element = {
+      name = "Element";
+      genericName = "Chat";
+      exec = "element-desktop";
+      terminal = false;
+      icon = ./element-icon.png;
+    };
+  };
 
   programs.home-manager.enable = true;
 }
