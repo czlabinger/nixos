@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./../../modules/nixos/common/packages.nix
     ./../../modules/nixos/boot
     ./../../modules/nixos/nix
   ];
@@ -129,238 +130,50 @@
 
   environment.systemPackages = with pkgs; [
 
-    # Audio
-    pulseaudio
-    pavucontrol
-    playerctl
-    wireplumber
-
-    # Bluetooth
-    bluez
-    blueberry
-
     # Browsers
-    firefox
     google-chrome
-
-    # Clipboard
-    wl-clipboard
 
     # Communication
     discord
     element-desktop-wayland
-    webcord
-    whatsapp-for-linux
-
-    # Cursors & Icons
-    bibata-cursors
-    beauty-line-icon-theme
-    qogir-icon-theme
-    nixos-icons
 
     # Development
-    arduino
-    arduino-ide
     alejandra
     cargo
     cudaPackages.cudatoolkit
     dart
-    devpod
-    docker
     flutter
-    git
     git-lfs
-    jdk21
-    #jdk17
-    gcc-arm-embedded
-    gnumake
-    maven
-    nodePackages.typescript
-    nodejs_22
-    nixd
-    nix-prefetch-git
-    ocamlPackages.ssl
-    libgcc
-    python311Packages.pip
-    python311
-    python311Packages.pip
-    python311Packages.gpustat
-    python311Packages.ipykernel
     rust-analyzer
     rustup
-    vim
     vimPlugins.flutter-tools-nvim
-    vscodium-fhs
-
-    # Editors
-    gnome-text-editor
-    neovide
-    neovim
-    zed-editor
-
-    # File Managers
-    xfce.thunar
-
-    # Font Managers
-    font-manager
-    material-design-icons
-
-    # Graphics
-    gimp
-    glxinfo
-    inkscape-with-extensions
-    mupdf
-    imagemagick
-
-    # GTK
-    adw-gtk3
-    libsForQt5.ark
-    libsForQt5.qt5.qtgraphicaleffects
-    nwg-look
-
-    # Hardware
-    brightnessctl
-    light
-    lshw
-
-    # Hyprland
-    hypridle
-    hyprlock
-    hyprls
-    hyprpicker
-    inputs.hyprsysteminfo.packages.${pkgs.system}.default
-    inputs.hyprpolkitagent.packages.${pkgs.system}.default
-    wlogout
-
-    hyprpanel
-
-    slurp
-    swww
-    xwayland
-
-    # Keyboards
-    fcitx5
-    xkeyboard_config
-
-    # Libraries
-    libGL
-    libGLU
-    libglvnd
-    libnotify
-    libz
 
     # Miscellaneous
     anki-bin
     cava
     fzf
     gnome-multi-writer
-    grim
-    hollywood
-    inputs.notion-calendar-electron.packages.${pkgs.system}.default
-    onefetch
-    texliveFull
-    texlivePackages.latexmk
-    spotify
-    vlc
-    wxmaxima
     ydotool
     zip
-    zoxide
     cbonsai
 
-    # Network
-    busybox
-    dbus
-    networkmanagerapplet
-    openssl
-
-    # Nix
-    nh
-    nil
-    nix-output-monitor
-    nix-prefetch-git
-    nvd
-
-    # Notification
-    dunst
-
-    # Productivity
-    foliate
-    wpsoffice
-
     # Programming Tools
-    arduino
-    arduino-ide
-    cmake
     dart
     flutter
-    insomnia
-    maven
-    nodePackages.typescript
-    nodejs_22
-    ocamlPackages.ssl
-    rust-analyzer
-    rustup
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
-    yarn
-
-    # Shells
-    oh-my-zsh
-    starship
-    zsh
-
-    # System Tools
-    btop
-    coreutils
-    dconf
-    lsd
-    neofetch
-    pkg-config
-    pv
-    virt-manager
-    virtio-win
-    virtiofsd
-
-    # Terminal Emulators
-    foot
-    kitty
-
-    # Text Editors
-    gnome-text-editor
-    vim
-    vimPlugins.flutter-tools-nvim
-    neovide
-    neovim
 
     # Utilities
     appimage-run
     baobab
-    busybox
-    coreutils
-    dconf
     fceux
-    foliate
-    glibc
     hollywood
     imagemagick
     lsd
-    neofetch
-    pkg-config
-    pv
     steam
-    teams-for-linux
-    tesseract4
     virt-manager
     virtio-win
     virtiofsd
-    libclang
     llvmPackages_17.clang
     pacman
-
-    # QT
-    kdePackages.qt6ct
-    libsForQt5.qt5ct
   ];
 
   environment.interactiveShellInit = ''

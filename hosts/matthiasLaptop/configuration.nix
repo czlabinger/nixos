@@ -115,128 +115,38 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wireplumber
-    dunst
-    vim
-    wget
-    #tree
-    vscode
-    git
     alejandra
-    libnotify
-    webcord
-    light
-    foot
-    kitty
-    xfce.thunar
-    gnome-text-editor
-    wpsoffice
     gnome.gnome-control-center
-    pavucontrol
     gnome.gnome-system-monitor
-    btop
-    wlogout
-    grim
-    slurp
-    wl-clipboard
-    playerctl
     ydotool
-    swww
-    fcitx5
     gnome.gnome-keyring
-    polkit
-    polkit_gnome
-    hypridle
-    hyprpanel
-    dbus
-    hyprlock
-    wofi
-    busybox
-    networkmanagerapplet
-    bluez
-    blueberry
-    pulseaudio
-    zsh
-    oh-my-zsh
-    starship
     gnome2.gtkglext
-    coreutils
-    nwg-look
-    beauty-line-icon-theme
-    baobab
-    jdk21
-    maven
-    jetbrains.idea-ultimate
     eclipses.eclipse-java
-    wxmaxima
-    docker
-    insomnia
-    neofetch
     hollywood
-    whatsapp-for-linux
-    neovim
-    neovide
     nodePackages.typescript
     luajitPackages.lua-lsp
-    python3
-    nodejs_22
     nodePackages_latest.bash-language-server
-    vlc
-    spotify
     cargo
     rustup
     rust-analyzer
     yarn
     mesa
-    mupdf
-    light
     nil
     gimp
-    bibata-cursors
-    adw-gtk3
     qogir-icon-theme
-    virt-manager
     google-chrome
     discord
     glxinfo
-    python311Packages.pip
-    arduino-ide
-    arduino
-    nixos-icons
-    nix-prefetch-git
     libsForQt5.qt5.qtgraphicaleffects
-    appimage-run
-    virtio-win
-    virtiofsd
-    lsd
-    libglvnd
-    glibc
-    flutter
-    dart
     libsForQt5.ark
-    pv
-    kdePackages.polkit-kde-agent-1
-    gnome-multi-writer
-    nh
-    nix-output-monitor
-    nvd
-    tesseract4
-    zoxide
-    brightnessctl
-    imagemagick
     vmware-workstation
     texliveTeTeX
-    onefetch
-    inputs.hyprsysteminfo.packages.${pkgs.system}.default
-    inputs.hyprpolkitagent.packages.${pkgs.system}.default
-    kdePackages.qt6ct
-    zed-editor
   ];
 
   environment.interactiveShellInit = ''
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
-    alias ls='lsd $1'  
+    alias ls='lsd $1'
     alias zed='DRI_PRIME=1 zed'
     alias zeditor='DRI_PRIME=1 zed'
   '';
@@ -296,7 +206,7 @@
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   programs.hyprlock.package = inputs.hyprlock.packages."${pkgs.system}".hyprlock;
-  
+
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
