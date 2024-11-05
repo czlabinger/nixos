@@ -5,6 +5,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./../../modules/nixos/common/packages.nix
+    ./../../modules/nixos/common/startup.nix  
     ./../../modules/nixos/boot
     ./../../modules/nixos/nix
   ];

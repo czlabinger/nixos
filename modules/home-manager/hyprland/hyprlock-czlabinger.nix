@@ -55,7 +55,7 @@
         {
           # Greeting
           monitor = "";
-          text = ''Hi <span foreground='##B30A16'>$USER</span>!'';
+          text = ''Hi <span foreground='##5BCEFA'>st</span><span foreground='##F5ABB9'>of</span><span foreground='##FFFFFF'>fi</span><span foreground='##F5ABB9'>05</span><span foreground='##5BCEFA'> :3</span>'';
           position = "0, 240";
           font_family = "JetBrainsMono";
           font_size = 20;

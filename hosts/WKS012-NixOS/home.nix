@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ../../modules/home-manager/hyprland
+    ../../modules/home-manager/hyprland/hyprland-czlabinger.nix
     ../../modules/home-manager/foot
     ../../modules/home-manager/zsh
     ../../modules/home-manager/starship
@@ -47,7 +47,7 @@
       executable = true;
     };
   };
-    
+
   gtk = {
     enable = true;
     cursorTheme.package = pkgs.bibata-cursors;
@@ -61,7 +61,7 @@
   };
 
   # 'home.sessionVariables'. # Change env variables
-  
+
   xdg.desktopEntries = {
     element = {
       name = "Element";

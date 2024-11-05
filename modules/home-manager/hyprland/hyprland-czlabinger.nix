@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./hyprlock.nix
+    ./hyprlock-czlabinger.nix
     ./hypridle.nix
   ];
 
@@ -264,6 +264,7 @@
         "Super, Apostrophe, splitratio, 0.1"
         "Super, F, fullscreen, 0"
         "Super, D, fullscreen, 1"
+        
         "Super, tab, exec, hyprswitch gui --mod-key super_l --key tab --max-switch-offset 9"
 
         #################### Move to workspace ####################

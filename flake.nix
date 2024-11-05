@@ -56,6 +56,11 @@
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
     };
+
+    hyprswitch = {
+      url = "github:H3rmt/hyprswitch";
+    };
+
   };
 
   outputs = {
