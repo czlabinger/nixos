@@ -94,12 +94,12 @@
           contrast = 1;
         };
         # Shadow
-        drop_shadow = false;
-        shadow_ignore_window = true;
-        shadow_range = 20;
-        shadow_offset = "0 2";
-        shadow_render_power = 2;
-        "col.shadow" = "rgba(0000001A)";
+        shadow = {
+            ignore_window = true;
+            range = 20;
+            offset = "0 2";
+            render_power = 2;
+        };
 
         # Dim
         dim_inactive = false;
@@ -264,7 +264,7 @@
         "Super, Apostrophe, splitratio, 0.1"
         "Super, F, fullscreen, 0"
         "Super, D, fullscreen, 1"
-        
+
         "Super, tab, exec, hyprswitch gui --mod-key super_l --key tab --max-switch-offset 9"
 
         #################### Move to workspace ####################
@@ -335,7 +335,7 @@
 
         # Cursor
         "hyprctl setcursor Bibata-Original-Classic 24"
-        
+
         # hyprswitch
         "hyprswitch init"
       ];
