@@ -10,6 +10,7 @@
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
     ../../modules/home-manager/qt
+    ../../modules/home-manager/common/configs.nix
     #../../modules/home-manager/ags
     #../../modules/home-manager/waybar
   ];
@@ -24,33 +25,6 @@
       google-chrome-stable "$@"
     '')
   ];
-
-  home.file = {
-    ".jdk".source = pkgs.jdk21;
-    #".jdk17".source = pkgs.jdk17;
-
-    ".python".source = pkgs.python3;
-
-    ".config/hypr/scripts/wofi_helper.sh" = {
-      text = ''
-
-        #!/usr/bin/env bash
-
-        if pgrep "wofi" > /dev/null
-        then
-          pkill wofi
-        else
-          wofi &
-        fi
-
-      '';
-      executable = true;
-    };
-
-    ".config/hyprswitch/hyprswitch.css" = {
-        text = builtins.readFile ../../modules/home-manager/hyprswitch/hyprswitch.css;
-    };
-  };
 
   gtk = {
     enable = true;
