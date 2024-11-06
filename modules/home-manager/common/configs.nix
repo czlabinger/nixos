@@ -28,6 +28,7 @@
       text = ''
         name:
           nixos: 
+          dev: 
       '';
     };
 
