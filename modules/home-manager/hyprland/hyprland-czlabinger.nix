@@ -337,7 +337,7 @@
         "hyprctl setcursor Bibata-Original-Classic 24"
 
         # hyprswitch
-        "hyprswitch init"
+        "hyprswitch init --custom-css $HOME/.config/hyprswitch/hyprswitch.css"
       ];
 
       plugin = {

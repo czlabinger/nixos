@@ -39,6 +39,11 @@
       '';
       executable = true;
     };
+
+    ".config/hyprswitch/hyprswitch.css" = {
+        text = builtins.readFile ../../modules/home-manager/hyprswitch/hyprswitch.css;
+    };
+
   };
 
   gtk = {
