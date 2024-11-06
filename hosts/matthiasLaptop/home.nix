@@ -9,7 +9,7 @@
     ../../modules/home-manager/kitty
     ../../modules/home-manager/neofetch
     ../../modules/home-manager/firefox
-    ../../modules/home-manager/ags
+    #../../modules/home-manager/ags
     ../../modules/home-manager/qt
     ../../modules/home-manager/common/configs.nix
     #../../modules/home-manager/waybar
