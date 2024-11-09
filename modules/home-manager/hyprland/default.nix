@@ -317,7 +317,7 @@
       #################### Execs ####################
 
       exec-once = [
-        "swww kill; swww init"
+        "swww kill; swww-daemon"
         "fcitx5"
         #"ags &"
         #"waybar &"
