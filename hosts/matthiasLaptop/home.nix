@@ -13,6 +13,7 @@
     ../../modules/home-manager/qt
     ../../modules/home-manager/common/configs.nix
     #../../modules/home-manager/waybar
+    ../../modules/home-manager/common/cachix.nix
   ];
 
   home.username = "matthias";

@@ -11,6 +11,7 @@
     ../../modules/home-manager/firefox
     ../../modules/home-manager/qt
     ../../modules/home-manager/common/configs.nix
+    ../../modules/home-manager/common/cachix.nix
     #../../modules/home-manager/ags
     #../../modules/home-manager/waybar
   ];
