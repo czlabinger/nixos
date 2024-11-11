@@ -108,6 +108,7 @@
         libclang
 
         # Miscellaneous
+        cachix
         inputs.notion-calendar-electron.packages.${pkgs.system}.default
         onefetch
         texliveFull

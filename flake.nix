@@ -12,7 +12,7 @@
 
     ags.url = "github:Aylur/ags";
 
-    waybar.url = "github:Alexays/Waybar";
+    #waybar.url = "github:Alexays/Waybar";
 
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
