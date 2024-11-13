@@ -35,6 +35,7 @@
         docker
         git
         jdk21
+        jq
         gcc-arm-embedded
         gnumake
         maven

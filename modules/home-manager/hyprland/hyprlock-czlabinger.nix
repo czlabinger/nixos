@@ -63,6 +63,17 @@
           halign = "center";
           valign = "center";
         }
+        {
+          # Caps state
+          monitor = "";
+          text = ''cmd[update:100] echo "<b>$(sh $HOME/.config/hypr/hyprlockCapsHelper.sh)</b>"'';
+          position = "0, 0";
+          font_family = "JetBrainsMono";
+          font_size = 20;
+          color = "rgba(ede0deFF)";
+          halign = "center";
+          valign = "bottom";
+        }
       ];
     };
   };

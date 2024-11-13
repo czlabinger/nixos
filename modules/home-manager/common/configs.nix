@@ -32,6 +32,10 @@
       '';
     };
 
+    ".config/hypr/hyprlockCapsHelper.sh" = {
+      text = builtins.readFile ../hyprland/hyprlockCapsHelper.sh;
+      executable = true;
+    };
   };
 
 }
