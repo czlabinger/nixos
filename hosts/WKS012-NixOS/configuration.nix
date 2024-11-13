@@ -109,6 +109,7 @@
       "stoffi05" = import ./home.nix;
     };
   };
+  nix.settings.trusted-users = [ "root" "stoffi05" ];
 
   nixpkgs.config.allowUnfree = true;
 
