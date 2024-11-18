@@ -33,7 +33,7 @@
     };
 
     ".config/hypr/hyprlockCapsHelper.sh" = {
-      text = builtins.readFile ../hyprland/hyprlockCapsHelper.sh;
+      text = builtins.readFile ../hyprland/hyprlockCapsLockHelper.sh;
       executable = true;
     };
   };

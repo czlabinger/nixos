@@ -568,11 +568,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1731496237,
-        "narHash": "sha256-8Gvta3nIf3jGMB/RhE5M+fBuJdWycyjZNo7Ccsy8/zw=",
+        "lastModified": 1731930514,
+        "narHash": "sha256-1qhvFYLkTNJDaV5JC+MHv+nUQxAfTIHpUBMVr4BJ21Y=",
         "owner": "H3rmt",
         "repo": "hyprswitch",
-        "rev": "c589367dd57d521d1f8fcedb03718cce15e8837b",
+        "rev": "5ee584b2bf2a436433048d7b386bf0e7b01677f2",
         "type": "github"
       },
       "original": {
