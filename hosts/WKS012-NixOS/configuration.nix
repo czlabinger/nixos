@@ -109,7 +109,7 @@
       "stoffi05" = import ./home.nix;
     };
   };
-  nix.settings.trusted-users = [ "root" "stoffi05" ];
+  nix.settings.trusted-users = [ "root" "stoffi05" "nixremote" ];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -218,6 +218,12 @@
   services.dbus.packages = with pkgs; [
     xfce.xfconf
   ];
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 8080 ];
+    allowedUDPPorts = [ 8080 ];
+  };
 
   environment.sessionVariables = {
     FLAKE = "/home/stoffi05/nixos";

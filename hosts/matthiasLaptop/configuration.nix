@@ -111,7 +111,7 @@
     };
   };
 
-  nix.settings.trusted-users = [ "root" "matthias" ];
+  nix.settings.trusted-users = [ "root" "matthias" "nixremote" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
