@@ -10,7 +10,7 @@
 
       listener = [
         {
-          timeout = 3 * 60;
+          timeout = 2 * 60;
           on-timeout = "hyprlock";
         }
         {
