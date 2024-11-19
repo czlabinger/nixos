@@ -135,7 +135,7 @@
 
     # Miscellaneous
     anki-bin
-    cava
+    #cava
     fzf
     gnome-multi-writer
     ydotool
