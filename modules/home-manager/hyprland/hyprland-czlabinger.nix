@@ -265,7 +265,8 @@
         "Super, F, fullscreen, 0"
         "Super, D, fullscreen, 1"
 
-        "Super, tab, exec, hyprswitch gui --mod-key super_l --key tab --max-switch-offset 9"
+        # hyprswitch
+        "Super, tab, exec, hyprswitch gui --mod-key super_l --key tab --close mod-key-release --sort-recent && hyprswitch dispatch"
 
         #################### Move to workspace ####################
         "Super, 1, exec, hyprctl dispatch workspace 1"
