@@ -18,7 +18,6 @@
         wl-clipboard
 
         # Communication
-        webcord
         whatsapp-for-linux
         teams-for-linux
 

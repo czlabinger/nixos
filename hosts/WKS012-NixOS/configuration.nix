@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ./../../modules/nixos/common/packages.nix
-    ./../../modules/nixos/common/startup.nix  
+    ./../../modules/nixos/common/startup.nix
     ./../../modules/nixos/boot
     ./../../modules/nixos/nix
   ];
@@ -119,7 +119,8 @@
     google-chrome
 
     # Communication
-    discord
+    arrpc
+    webcord-vencord
     element-desktop-wayland
 
     # Development

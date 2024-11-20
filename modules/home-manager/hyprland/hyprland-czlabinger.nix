@@ -338,6 +338,9 @@
 
         # hyprswitch
         "hyprswitch init --custom-css $HOME/.config/hyprswitch/hyprswitch.css"
+
+        # arRPC
+        "arrpc &"
       ];
 
       plugin = {
