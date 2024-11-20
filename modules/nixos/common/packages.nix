@@ -51,7 +51,7 @@
 
         # Editors
         gnome-text-editor
-        #neovide
+        neovide
         neovim
         zed-editor
 
