@@ -145,7 +145,7 @@
     libsForQt5.ark
     vmware-workstation
     texliveTeTeX
-    webdord
+    webcord
   ];
 
   environment.interactiveShellInit = ''
