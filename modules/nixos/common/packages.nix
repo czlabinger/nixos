@@ -166,6 +166,7 @@
         kitty
 
         # Utilities
+        fastfetch
         tesseract4
         wofi
 

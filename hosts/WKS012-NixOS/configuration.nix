@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -11,7 +12,16 @@
     ./../../modules/nixos/nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+
+    
+    kernelParams = [
+      "intel_iommu=on"
+      "iommu=pt"
+      "vfio-pci.ids=10de:2489,10de:228b"
+    ];
+  };
 
   swapDevices = [{
     device = "/swapfile";
@@ -77,9 +87,12 @@
 
   services.xserver.videoDrivers = ["nvidia"];
 
+  hardware.nvidia-container-toolkit.enable = true;
   hardware.nvidia = {
     open = true;
     modesetting.enable = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     prime = {
       offload = {
@@ -114,6 +127,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+
+    minikube
 
     # Browsers
     google-chrome
@@ -153,13 +168,21 @@
     fceux
     hollywood
     imagemagick
+    libnvidia-container
     lsd
+    nvidia-container-toolkit
+    nvidia-docker
     steam
     virt-manager
     virtio-win
     virtiofsd
     llvmPackages_17.clang
     pacman
+    protontricks
+    wine
+
+    # Switch dev
+    ryujinx
   ];
 
   environment.interactiveShellInit = ''
@@ -187,7 +210,11 @@
     roboto-mono
     font-awesome
     noto-fonts-emoji
-    (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "JetBrainsMono" "Iosevka" "SpaceMono"];})
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
+    nerd-fonts.space-mono
   ];
 
   environment.etc = with pkgs; {
