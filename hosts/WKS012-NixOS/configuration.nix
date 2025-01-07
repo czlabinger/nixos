@@ -69,7 +69,7 @@
 
   hardware.bluetooth.enable = true;
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -128,15 +128,13 @@
 
   environment.systemPackages = with pkgs; [
 
-    minikube
-
     # Browsers
     google-chrome
 
     # Communication
     arrpc
     webcord-vencord
-    element-desktop-wayland
+    element-desktop
 
     # Development
     alejandra
@@ -192,6 +190,7 @@
     export __VK_LAYER_NV_optimus=NVIDIA_only
     export CMAKE_C_COMPILER=${pkgs.libgcc}/
     export CMAKE_CXX_COMPILER=${pkgs.libgcc}/
+    export NIXOS_OZONE_WL=1
 
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'

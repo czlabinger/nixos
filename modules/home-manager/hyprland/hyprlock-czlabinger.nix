@@ -11,7 +11,6 @@
 
       background = [
         {
-          #Broken again
           path = "screenshot";
           #path = "/home/stoffi05/Pictures/lucy.jpg";
           blur_passes = 4;
