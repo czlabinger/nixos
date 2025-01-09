@@ -89,6 +89,7 @@
         inputs.hyprsysteminfo.packages.${pkgs.system}.default
         inputs.hyprpolkitagent.packages.${pkgs.system}.default
         inputs.hyprswitch.packages.${pkgs.system}.default
+        inputs.hyprqtsupport.packages.${pkgs.system}.default
         slurp
         swww
         wlogout

@@ -49,6 +49,8 @@
 
     hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
 
+    hyprqtsupport.url = "github:hyprwm/hyprland-qt-support";
+
     xdg-desktop-portal-hyprland = {
       url = "github:hyprwm/xdg-desktop-portal-hyprland";
     };

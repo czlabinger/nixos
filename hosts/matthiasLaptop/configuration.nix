@@ -149,6 +149,8 @@
   ];
 
   environment.interactiveShellInit = ''
+    export QT_QUICK_CONTROLS_STYLE=org.hyprland.style
+
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'

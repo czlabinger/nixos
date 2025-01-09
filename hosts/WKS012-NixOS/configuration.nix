@@ -192,6 +192,8 @@
     export CMAKE_CXX_COMPILER=${pkgs.libgcc}/
     export NIXOS_OZONE_WL=1
 
+    export QT_QUICK_CONTROLS_STYLE=org.hyprland.style
+    
     alias nvim='neovide $1 --fork'
     alias tree='lsd --tree'
     alias ls='lsd $1'
