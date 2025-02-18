@@ -1,4 +1,7 @@
-{...}: {
+{
+  config,
+  ...
+}: {
   programs.hyprlock = {
     enable = true;
 
@@ -65,7 +68,7 @@
         {
           # Caps state
           monitor = "";
-          text = ''cmd[update:100] echo "<b>$(sh $HOME/.config/hypr/hyprlockCapsHelper.sh)</b>"'';
+          text = ''cmd[update:1000] echo "<b>$(${config.home.homeDirectory}/.config/hypr/hyprlockCapsHelper.sh)</b>"'';
           position = "0, 0";
           font_family = "JetBrainsMono";
           font_size = 20;

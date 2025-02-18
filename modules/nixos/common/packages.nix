@@ -116,7 +116,7 @@
         texlivePackages.latexmk
         spotify
         vlc
-        wxmaxima
+        #wxmaxima
 
         # Network
         busybox

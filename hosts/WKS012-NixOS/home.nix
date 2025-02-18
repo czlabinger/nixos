@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [
+    imports = [
     ../../modules/home-manager/hyprland/hyprland-czlabinger.nix
     ../../modules/home-manager/foot
     ../../modules/home-manager/zsh
@@ -26,6 +26,33 @@
       google-chrome-stable "$@"
     '')
   ];
+
+
+
+/*
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Firefly";
+    size = 24;
+
+    package = pkgs.runCommand "install-firefly" {} ''
+      mkdir -p $out/share/icons/Firefly
+      ${pkgs.fetchurl {
+        url = "https://ocs-dl.fra1.cdn.digitaloceanspaces.com/data/files/1732277116/Firefly.tar.gz?response-content-disposition=attachment%3B%2520Firefly.tar.gz&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=RWJAQUNCHT7V2NCLZ2AL%2F20250114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250114T090008Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=8576f7c8a1fc65444a10cb8b6ef60707626bc92e86e79f2c3026a9d8113b59d4";
+        sha256 = "sha256-e8J0oPb83iT5GgqXaey+VSLOJtq2noWAtJXrD6S88Is=";
+        name = "$out/Firefly.tar.gz";
+      }}
+      echo $pwd
+      echo $(ls -la)
+      chmod 777 $out/firefly.tar.gz
+      tar xf firefly.tar.gz -C $out/share/icons/Firefly 
+      chmod -R u+rwx $out/share/icons/Firefly
+      chown -R root:root $out/share/icons/Firefly
+    '';
+  };
+
+*/
 
   gtk = {
     enable = true;

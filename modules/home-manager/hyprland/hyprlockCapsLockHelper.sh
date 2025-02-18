@@ -10,4 +10,4 @@ else
 fi
 
 echo "$out"
-exit
+exit 0

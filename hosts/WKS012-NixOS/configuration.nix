@@ -128,6 +128,9 @@
 
   environment.systemPackages = with pkgs; [
 
+    go
+
+
     # Browsers
     google-chrome
 
@@ -171,6 +174,7 @@
     nvidia-container-toolkit
     nvidia-docker
     steam
+    tidal-hifi
     virt-manager
     virtio-win
     virtiofsd

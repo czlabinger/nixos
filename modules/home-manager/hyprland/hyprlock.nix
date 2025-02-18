@@ -1,4 +1,7 @@
-{...}: {
+{
+  config,
+  ...
+}: {
   programs.hyprlock = {
     enable = true;
 
@@ -12,7 +15,7 @@
       background = [
         {
           path = "screenshot";
-          #path = "/home/stoffi05/Pictures/lucy.jpg";
+          #path = "/home/stoffi05/pictures/lucy.jpg";
           blur_passes = 4;
           blur_size = 4;
           contrast = 1.2;
@@ -27,8 +30,8 @@
           outline_thickness = 3;
           dots_center = true;
           outer_color = "rgba(a08c8955)";
-          inner_color = "rgba(130F0F11)";
-          font_color = "rgba(d8c2bfFF)";
+          inner_color = "rgba(130f0f11)";
+          font_color = "rgba(d8c2bfff)";
           fade_on_empty = false;
           dots_spacing = 0.3;
           placeholder_text = "";
@@ -41,34 +44,34 @@
 
       label = [
         {
-          # Clock
+          # clock
           monitor = "";
-          text = ''cmd[update:100] echo "<b>$(date +'%T')</b>"'';
+          text = ''cmd[update:100] echo "<b>$(date +'%t')</b>"'';
           position = "0, 300";
-          font_family = "JetBrainsMono";
+          font_family = "jetbrainsmono";
           font_size = 20;
-          color = "rgba(ede0deFF)";
+          color = "rgba(ede0deff)";
           halign = "center";
           valign = "center";
         }
         {
-          # Greeting
+          # greeting
           monitor = "";
-          text = ''Hi <span foreground='##B30A16'>$USER</span>!'';
+          text = ''hi <span foreground='##b30a16'>$user</span>!'';
           position = "0, 240";
-          font_family = "JetBrainsMono";
+          font_family = "jetbrainsmono";
           font_size = 20;
-          color = "rgba(ede0deFF)";
+          color = "rgba(ede0deff)";
           halign = "center";
           valign = "center";
         }
         {
           monitor = "";
-          text = ''cmd[update:500] echo "<b>$(sh $HOME/.config/hypr/hyprlockCapsHelper.sh)</b>"'';
+          text = ''cmd[update:1000] echo "<b>$(${config.home.homeDirectory}/.config/hypr/hyprlockCapsHelper.sh)</b>"'';
           position = "0, 0";
-          font_family = "JetBrainsMono";
+          font_family = "jetbrainsmono";
           font_size = 20;
-          color = "rgba(ede0deFF)";
+          color = "rgba(ede0deff)";
           halign = "right";
           valign = "bottom";
         }
