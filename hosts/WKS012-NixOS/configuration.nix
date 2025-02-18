@@ -130,7 +130,6 @@
 
     go
 
-
     # Browsers
     google-chrome
 
