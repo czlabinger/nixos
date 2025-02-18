@@ -15,7 +15,6 @@
       background = [
         {
           path = "screenshot";
-          #path = "/home/stoffi05/pictures/lucy.jpg";
           blur_passes = 4;
           blur_size = 4;
           contrast = 1.2;
@@ -57,7 +56,7 @@
         {
           # greeting
           monitor = "";
-          text = ''hi <span foreground='##b30a16'>$user</span>!'';
+          text = ''hi <span foreground='##b30a16'>$USER</span>!'';
           position = "0, 240";
           font_family = "jetbrainsmono";
           font_size = 20;
