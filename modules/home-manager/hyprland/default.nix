@@ -318,7 +318,6 @@
       #################### Execs ####################
 
       exec-once = [
-        "Xwayland"
         "swww kill; swww-daemon"
         "fcitx5"
         #"ags &"
