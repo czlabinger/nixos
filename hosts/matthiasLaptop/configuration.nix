@@ -120,8 +120,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alejandra
-    gnome.gnome-control-center
-    gnome.gnome-system-monitor
+    gnome-control-center
+    gnome-system-monitor
     ydotool
     gnome.gnome-keyring
     gnome2.gtkglext
