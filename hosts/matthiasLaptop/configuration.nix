@@ -123,7 +123,7 @@
     gnome-control-center
     gnome-system-monitor
     ydotool
-    gnome.gnome-keyring
+    gnome-keyring
     gnome2.gtkglext
     eclipses.eclipse-java
     hollywood
