@@ -168,8 +168,13 @@
     roboto-mono
     font-awesome
     noto-fonts-emoji
-    (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "JetBrainsMono" "Iosevka" "SpaceMono"];})
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
+    nerd-fonts.space-mono
   ];
+
 
   environment.etc = with pkgs; {
     "openjdk21".source = jdk21;
